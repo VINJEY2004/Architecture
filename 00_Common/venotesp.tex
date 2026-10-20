@@ -1,0 +1,1035 @@
+\documentclass[oneside,10pt]{report}
+\usepackage[a4paper,left=2cm,right=2cm,top=2.5cm,bottom=2.5cm,footnotesep=0.5cm]{geometry}
+\usepackage{ifthen}
+\usepackage{verbatim}
+\usepackage{graphpap}
+\usepackage{graphicx}
+\usepackage{pict2e}
+\usepackage{color}
+\usepackage{makeidx}
+\usepackage{showidx}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{pdflscape}
+\usepackage{listings}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage{relsize}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[colorlinks = true,
+linkcolor = blue,
+urlcolor  = blue,
+citecolor = blue,
+anchorcolor = blue]{hyperref}
+\usepackage{url}
+\usepackage{longtable}
+%\usepackage{afterpage}
+\usetikzlibrary{circuits.logic.US}
+\usetikzlibrary{arrows.meta}
+\allowdisplaybreaks[1]
+\usepackage{pgfplots}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{angles,quotes}
+\pagestyle{empty}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{eso-pic}
+\usepackage{pdfpages}
+
+%\pgfplotsset{compat=1.15}
+\newcommand{\degre}{\ensuremath{^\circ}}
+
+%
+% \mathset{set-name}
+%     Stylized character corresponding to a math sets like 
+% N - Natuaral Numbers
+% Z - Integers
+% Q - Rational Numbers
+% R - Real Numbers
+% C - Complex Numbers
+%
+
+\newcommand{\mathset}[1]
+{%
+    \mathbb
+    {%
+    {#1}%
+    }%
+}
+
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\arcsec}{arcsec}
+
+\newcommand{\acTitle}[1]%
+{%
+    \chapter{#1}
+}
+
+\newcommand{\acHead}[1]%
+{%
+    \section{#1}
+}
+
+\newcommand{\union}
+{%
+    \cup
+}
+
+\newcommand{\bunion}
+{%
+    \bigcup
+}
+
+\newcommand{\intersect}
+{%
+    \cap
+}
+
+\newcommand{\bintersect}
+{%
+    \bigcap
+}
+
+\newcommand{\crossprod}
+{%
+    \times
+}
+
+\newcommand{\wherein}
+{%
+    \mid
+}
+
+\newcommand{\tendsto}
+{%
+    \rightarrow
+}
+
+\newcommand{\iorel}
+{%
+    \rightarrow
+}
+
+\newcommand{\convolves}
+{%
+    \star
+}
+
+\newcommand{\eqnlabel}[1]
+{%
+    \label{eq:#1}%
+}
+
+\newcommand{\eqnref}[1]
+{%
+    Eqn-(\ref{eq:#1})%
+}
+
+\newcommand{\axiomlabel}[1]
+{%
+    \label{axiom:#1}%
+}
+
+\newcommand{\axiomref}[1]
+{%
+    Axiom-(\ref{axiom:#1})%
+}
+
+\newcommand{\tablabel}[1]
+{%
+    \label{tab:#1}%
+}
+
+\newcommand{\tabref}[1]
+{%
+    Table-(\ref{tab:#1})%
+}
+
+\newcommand{\figlabel}[1]
+{%
+    \label{fig:#1}%
+}
+
+\newcommand{\figref}[1]
+{%
+    Figure-(\ref{fig:#1})%
+}
+
+\newcommand{\ptlabel}[1]
+{%
+    \label{pt:#1}%
+}
+
+\newcommand{\ptref}[1]
+{%
+    Point-(\ref{pt:#1})%
+}
+
+%
+% LinkLabel
+%     Label for location
+%
+
+\newcommand{\LinkLabel}[1]
+{%
+\hypertarget{#1}{ }
+}
+
+%
+% LinkRef
+%     Ref for section in the Act
+%
+
+\newcommand{\LinkRef}[2]
+{%
+    \hyperlink{#1}{#2}%
+}
+
+
+\newcommand{\incircle}[1]
+{%
+\begin{tikzpicture}
+\node[draw,circle]{#1};
+\end{tikzpicture}
+}
+
+\newcommand{\inrect}[1]
+{%
+\begin{tikzpicture}
+\node[draw,rectangle]{#1};
+\end{tikzpicture}
+}
+
+\newcommand{\indcircle}[1]
+{%
+\begin{tikzpicture}
+\node[draw,circle,double]{#1};
+\end{tikzpicture}
+}
+
+\newcommand{\drawbposs}
+{%
+\foreach \x in {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
+    \draw (15 - \x + 0.5, 1) node[anchor=north] {\scriptsize \x};
+}%
+
+\newcommand{\xss}{0.6}
+\newcommand{\yss}{0.2}
+
+\newcommand{\drawbpos}
+{%
+\foreach \x in {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 
+               17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31}
+    \draw (31 - \x + 0.5, 1) node[anchor=north] {\scriptsize \x};
+}%
+
+\newcommand{\xs}{0.325}
+\newcommand{\ys}{0.18}
+
+\newcommand{\euclidAxiomLabel}[1]
+{%
+    \label{euclidAxiomLabel:#1}%
+}
+
+\newcommand{\euclidAxiomRef}[1]
+{%
+    axiom #1 [\ref{euclidAxiomLabel:#1}]%
+}
+
+\newcommand{\euclidCmnNotionLabel}[1]
+{%
+    \label{euclidCommonNotionLabel:#1}%
+}
+
+\newcommand{\euclidCmnNotionRef}[1]
+{%
+    C.N #1 [\ref{euclidCommonNotionLabel:#1}]%
+}
+
+\newcommand{\euclidDefLabel}[2]
+{%
+    \label{euclidDefLabel:#1:#2}%
+}
+
+\newcommand{\euclidDefRef}[2]
+{%
+    definition #2 of book #1 (\ref{euclidDefLabel:#1:#2})%
+}
+
+\newcommand{\euclidPropLabel}[2]
+{%
+    \label{euclidPropLabel:#1:#2}%
+}
+
+\newcommand{\euclidPropRef}[2]
+{%
+    proposition #2 of book #1 (\ref{euclidPropLabel:#1:#2})%
+}
+\newcommand{\vect}[1]
+{%
+    \overrightarrow{#1}%
+}
+
+\newcommand{\nCr}[2]
+{%
+    ^{{#1}}C_{#2}%
+}
+
+\newcommand{\nPr}[2]
+{%
+    ^{#1}P_{#2}%
+}
+
+\tikzset{
+    partial ellipse/.style args={#1:#2:#3}{
+        insert path={+ (#1:#3) arc (#1:#2:#3)}
+    }
+}
+
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0pt}
+
+\newboolean{newapi}
+\setboolean{newapi}{false}
+\newboolean{haveSolutions}
+
+\newenvironment{apiprototype}%
+{%
+    \begin{lstlisting}[language=C]
+}%
+{%
+    \end{lstlisting}
+}
+
+%
+% \dsstart{component name}
+%      Macro that is used for filling the contents in start of data structures
+% section
+%
+
+\newcommand{\dsstart}[1]%
+{%
+This section provides information regarding various data structures and data 
+buffers that application developer need to know for developing applications
+using #1.
+}
+
+%
+% \dsfields
+%     Text added before data structure fields
+%
+
+\newcommand{\dsfields}%
+{%
+Below is brief description of fields in this structure.
+}
+
+%
+% \apistart{component name}
+%     Macro that is used for filling the contents in start of API section
+%
+
+\newcommand{\apistart}[1]
+{%
+This section provides information regarding different Application Program
+Interfaces that is provided by #1.
+}
+
+%
+% \apiparams{api name}
+%     Text added before API parameter description
+%
+
+\newcommand{\apiparams}[1]
+{%
+Below is brief information on arguments of #1 function.
+}
+
+%
+% \apirvalue{api name}
+%     Text added before API return values
+%
+
+\newcommand{\apirvalue}[1]
+{%
+Possible return values from #1 are given below.
+}
+
+%
+% \encapstruct{struct name}{component name}{category}
+%     Macro that is used for filling the contents related to encapsulation
+% structure in the data structures section
+%
+
+\newcommand{\encapstruct}[3]%
+{%
+\cstruct{#1} is created to encapsulate #2 implementation details to the 
+application developer. Size of this structure is defined to be greater than or
+equal to the corresponding internal structure used by the #3 implementation. As 
+this structure is created only for encapsulation purpose, details of its field 
+is not described here.
+}
+
+%--------------------------------------------------------------------------------------------------%
+%                                                                                                  %
+% Label and Reference commands:                                                                    %
+%     This are commands that are used for creating a label and referencing them. They are there    %
+% for following reasons                                                                            %
+%    a. To have scope for different categories by adding a prefix for the same. In other words it  %
+%       allows for \figlabel{topic1} and \tablabel{topic1}.                                        %
+%    b. They use \mbox in the reference to ensure that the details and the reference number        %
+%       doesn't appear in the same line.                                                           %
+%                                                                                                  %
+% Table below provides the list of them                                                            %
+%                                                                                                  %
+%     \seclabel, \secref: Sections                                                                 %
+%     \eqlabel, \eqref: Equations                                                                  %
+%     \tablabel, \tabref: For tables                                                               %
+%     \figlabel, \figref: For figures                                                              %
+%                                                                                                  %
+%--------------------------------------------------------------------------------------------------%
+
+%
+% \seclabel{section-name}
+%     Adds label for a section
+%
+
+\newcommand{\seclabel}[1]
+{%
+    \label
+    {%
+    {sec:#1}%
+    }%
+}
+
+%
+% \secref{section-name}
+%     References label declared earlier
+%
+
+\newcommand{\secref}[1]
+{%
+    \mbox
+    {%
+    Section-\ref
+        {%
+        {sec:#1}%
+        }%
+    }%
+}
+
+%--------------------------------------------------------------------------------------------------%
+%                                                                                                  %
+% Audio Decoder/Parser User Manual usually have the following structure                            %
+% Title                                                                                            %
+%   |                                                                                              %
+%   +---- Overview                                                                                 %
+%   |     Subheading in these would have overview information about audio decoder/parser. They     %
+%   |     need to use the macro                                                                    %
+%   |         \prsrOverviewHead{heading}                                                           %
+%   |                                                                                              %
+%   +---- Data Structures and Buffers                                                              %
+%   |     Subheadings in these would have information about individual data structure or buffer    %
+%   |     information. They need to use the macro                                                  %
+%   |         \adecDataStructHead{heading}                                                         %
+%   |         \prsrDataStructHead{heading}                                                         %
+%   |                                                                                              %
+%   +---- Application Program Interface                                                            %
+%   |     Subheading in these would have information about individual API related information.     %
+%   |     They need to use the macro                                                               %
+%   |         \adecApiHead{heading}                                                                %
+%   |         \prsrApiHead{heading}                                                                %
+%   |                                                                                              %
+%   +---- Implementation Notes                                                                     %
+%         Subheading in these would have information about specific point to note about the        %
+%         implementation. They need to use the macro                                               % 
+%             \adecInoteHead{heading}                                                              %
+%             \prsrInoteHead{heading}                                                              %
+%                                                                                                  %
+% All the headings within the audio decoder/parser user manual need to go inside                   %
+%     \adecHead,                                                                                   %
+%     \prsrHead                                                                                    %
+%                                                                                                  %
+% Title pertaining to each audio decoder/parser would go inside \adecTitle, \prsrTitle             %
+%                                                                                                  %
+%--------------------------------------------------------------------------------------------------%
+
+%
+% \prsrOverviewHead{heading}
+%     Heading in the parser overview section
+%
+
+\newcommand{\prsrOverviewHead}[1]
+{%
+    \subsubsection{#1}
+}
+
+%
+% \adecDataStructHead{heading}
+%     Audio Decoder - Data Structure heading
+%
+
+\newcommand{\adecDataStructHead}[1]
+{%
+    \subsubsection{#1}
+}
+
+%
+% \prsrDataStructHead{heading}
+%     Parser - Data Structure heading
+%
+
+\newcommand{\prsrDataStructHead}[1]
+{%
+    \subsubsection{#1}
+}
+
+%
+% \adecApiHead{heading}
+%     Audio Decoder - Application Program Interface heading
+%
+
+\newcommand{\adecApiHead}[1]
+{%
+    \subsubsection{#1}
+}
+
+%
+% \prsrApiHead{heading}
+%     Parser API heading
+%
+
+\newcommand{\prsrApiHead}[1]
+{%
+    \subsubsection{#1}
+}
+
+%
+% \adecInoteHead{heading}
+%     Audio Decoder - Implementation Notes heading
+%
+
+\newcommand{\adecInoteHead}[1]
+{%
+    \subsubsection{#1}
+}
+
+%
+% \prsrInoteHead{heading}
+%     Parser - Implementation Notes heading
+%
+
+\newcommand{\prsrInoteHead}[1]
+{%
+    \subsubsection{#1}
+}
+
+%
+% \adecHead{heading}
+%     Heading in the decoder user manual
+%
+
+\newcommand{\adecHead}[1]
+{%
+    \subsection{#1}
+}
+
+%
+% \prsrHead{heading}
+%     Heading in the parser user manual
+%
+
+\newcommand{\prsrHead}[1]
+{%
+    \subsection{#1}
+}
+
+%
+% \adecTitle{title}
+%     Decoder title level
+%
+
+\newcommand{\adecTitle}[1]
+{%
+    \section{#1}
+}
+
+%
+% \prsrTitle{title}
+%     Parser title level
+%
+
+\newcommand{\prsrTitle}[1]
+{%
+    \section{#1}
+}
+
+%
+% \styleTitle{title}
+%
+
+\newcommand{\styleTitle}[1]
+{%
+    \section{#1}
+}
+
+%------------------------------------------------------------------------------
+
+%
+% \rectangle(basex,basey)(length,breadth)
+%      Draw a rectangle
+%
+
+\def\rectangle(#1,#2)(#3,#4)%
+{%
+{%
+    \put(#1,#2){\line(1,0){#3}}%
+    \put(#1,#2){\line(0,1){#4}}%
+    \count0=#1%
+    \count1=#2%
+    \advance\count0 by #3%
+    \put(\count0,#2){\line(0,1){#4}}%
+    \advance\count1 by #4%
+    \put(\count0,\count1){\line(-1,0){#3}}%
+}%
+}
+
+% Error code
+\newcommand{\ecode}[1]{#1}
+
+% C Language Macro
+\newcommand{\cmacro}[1]{#1}
+
+% C API
+\newcommand{\capi}[1]{#1}
+
+% C Data Structure
+\newcommand{\cstruct}[1]{#1}
+
+% Component Name
+\newcommand{\cname}[1]{#1}
+
+%
+% datastruct
+%     Environment used for providing information about data structures
+%
+
+\newenvironment{datastruct}
+{%
+\begin{center}
+\begin{tabular}{|p{0.18\linewidth}|p{0.78\linewidth}|}
+\hline
+\multicolumn{1}{|c|}{\emph{Field}} & 
+\multicolumn{1}{|c|}{\emph{Description}} \\ \hline
+}%
+{%
+\end{tabular}%
+\end{center}%
+}
+
+%
+% describe
+%     Environment for providing description
+%
+
+\newenvironment{describe}
+{%
+    \begin{list}{}{\setlength{\leftmargin}{0pt}}%
+}%
+{%
+    \end{list}
+}%
+
+%
+% \figfour{Input}{Box-1 Contents}{Box-2 Contents}
+%         {Box-3 Contents}{Box-4 Contents}{Output}
+%         {Caption}{Label}
+% Draw a overview figure with four boxes
+%
+
+\newcommand{\figfour}[8]
+{%
+\begin{figure}[h]
+\begin{center}
+\setlength{\unitlength}{0.2em}
+\begin{picture}(100,95)
+
+% Input
+\put(20,82){\makebox(60,10)[b]{\scriptsize #1}}
+
+% Box-1 Contents
+\rectangle(20,65)(60,10)%
+\put(20,65){\makebox(60,10){\scriptsize #2}}
+
+% Box-2 Contents
+\rectangle(20,50)(60,10)%
+\put(20,50){\makebox(60,10){\scriptsize #3}}
+
+% Box-3 Contents
+\rectangle(20,35)(60,10)
+\put(20,35){\makebox(60,10){\scriptsize #4}}
+
+% Box-4 Contents
+\rectangle(20,20)(60,10)
+\put(20,20){\makebox(60,10){\scriptsize #5}}
+
+% Vectors
+\put(50,20){\vector(0,-1){5}}
+\put(50,80){\vector(0,-1){5}}
+\put(50,65){\vector(0,-1){5}}
+\put(50,50){\vector(0,-1){5}}
+\put(50,35){\vector(0,-1){5}}
+
+% Output
+\put(20,3){\makebox(60,10)[t]{\scriptsize #6}}
+
+\end{picture}
+\end{center}
+\caption{#7}
+\label{#8}
+\end{figure}
+}
+
+%
+% \figfive{Input}{Box-1 Contents}{Box-2 Contents}
+%         {Box-3 Contents}{Box-4 Contents}
+%         {Box-5 Contents}{Output}
+%         {Caption}{Label}
+% Draw a overview figure with five boxes
+%
+
+\newcommand{\figfive}[9]
+{%
+\begin{figure}[h]
+\begin{center}
+\setlength{\unitlength}{0.2em}
+\begin{picture}(100,100)
+% Input
+\put(20,91){\makebox(60,10)[b]{\scriptsize #1}}
+
+% Box-1 Contents
+\rectangle(20,75)(60,10)
+\put(20,75){\makebox(60,10){\scriptsize #2}}
+
+% Box-2 Contents
+\rectangle(20,60)(60,10)%
+\put(20,60){\makebox(60,10){\scriptsize #3}}
+
+% Box-3 Contents
+\rectangle(20,45)(60,10)
+\put(20,45){\makebox(60,10){\scriptsize #4}}
+
+% Box-4 Contents
+\rectangle(20,30)(60,10)
+\put(20,30){\makebox(60,10){\scriptsize #5}}
+
+% Box-5 Contents
+\rectangle(20,15)(60,10)
+\put(20,15){\makebox(60,10){\scriptsize #6}}
+
+% Output
+\put(20,0){\makebox(60,9)[t]{\scriptsize #7}}
+
+% Vectors
+\put(50,90){\vector(0,-1){5}}
+\put(50,75){\vector(0,-1){5}}
+\put(50,60){\vector(0,-1){5}}
+\put(50,45){\vector(0,-1){5}}
+\put(50,30){\vector(0,-1){5}}
+\put(50,15){\vector(0,-1){5}}
+\end{picture}
+\end{center}
+\caption{#8}
+\label{#9}
+\end{figure}
+}
+
+\newcommand{\mc}[3]
+{%
+\multicolumn{#1}{#2}{#3}
+}
+
+\newcommand{\mr}[3]
+{%
+\multirow{#1}{#2}{#3}
+}
+
+\newcommand{\rou}[2]
+{%
+    \mathlarger{\mathlarger{\omega}}^{^{#1}}_{_{#2}}
+}
+
+\newcommand{\lconv}
+{%
+    \ast
+}
+
+\newcommand{\pconv}
+{%
+    \circledast_p
+}
+
+\newcommand{\cconv}
+{%
+    \circledast
+}
+
+\newcommand{\lxcorr}
+{%
+    \times
+}
+
+\newcommand{\pxcorr}
+{%
+    \otimes_p
+}
+
+\newcommand{\cxcorr}
+{%
+    \otimes
+}
+
+\newcommand{\Real}
+{%
+    \operatorname{Re}
+}
+
+\newcommand{\Imag}
+{%
+    \operatorname{Im}
+}
+
+\newcommand{\coss}[2]
+{%
+    C^{^{#1}}_{_{#2}}
+}
+
+\newcommand{\Sinc}
+{%
+    \operatorname{Sinc}
+}
+
+%
+% levelone
+%     Level information
+%
+
+\newcommand{\levelone}
+{%
+    \setlength{\leftskip}{0em}
+}%
+
+%
+% leveltwo
+%     Level two information
+%
+
+\newcommand{\leveltwo}
+{%
+    \setlength{\leftskip}{2em}
+}
+
+%
+% levelthree
+%     Level three of information
+%
+
+\newcommand{\levelthree}
+{%
+    \setlength{\leftskip}{4em}
+}
+
+%
+% levelfour
+%     Level four of information
+%
+
+\newcommand{\levelfour}
+{%
+    \setlength{\leftskip}{6em}
+}
+
+%
+% SOPNote
+%     SOP Notes
+%
+
+%
+% SOPNoteHead
+%     Heading for the SOP Notes
+%
+
+\newcommand{\SOPNoteHead}[1]
+{%
+    {%
+    \setlength{\leftmargin}{0pt}
+    \setlength{\parindent}{0em}
+    \setlength{\leftskip}{0em}
+    \par
+    \textrm{%
+    \textbf{%
+    #1%
+    }}}%
+}
+
+%
+% SOPNoteHeadToc
+%     Heading for the SOP Notes with Table of Contents
+%
+
+\newcommand{\SOPNoteHeadToc}[1]
+{%
+    {%
+    \setlength{\leftmargin}{0pt}
+    \setlength{\parindent}{0em}
+    \setlength{\leftskip}{0em}
+    \par
+    \textrm{%
+    \textbf{%
+    #1%
+    }}}%
+    \addcontentsline{toc}{section}{#1}%
+}
+
+%
+% SOPNoteBody
+%     Body for the SOP Notes
+%
+
+\newcommand{\SOPNoteBody}
+{%
+    \mdseries
+    \sffamily
+    \setlength{\parskip}{1em}
+    \setlength{\parindent}{0em}
+    \setlength{\leftskip}{0em}
+}
+
+%
+% SOPNoteFootNote
+%     Section body for SOP Note
+%
+
+\newcommand{\SOPNoteFootNote}[1]
+{%
+\footnote{\sffamily\scriptsize #1}
+}
+
+%
+% SOPNoteLabel
+%     Label for SOP Note
+%
+
+\newcommand{\SOPNoteLabel}[1]
+{%
+\hypertarget{#1}{ }
+}
+
+%
+% SOPNoteRef
+%     Ref for SOP Note
+%
+
+\newcommand{\SOPNoteRef}[2]
+{%
+        \hyperlink{#1}{#2}%
+}
+
+
+%
+% asr
+%     Label for SOP Note
+%
+
+\newcommand{\asr}
+{%
+    \gg_a
+}
+
+\newcommand{\lsr}
+{%
+    \gg_l
+}
+
+\newcommand{\rsh}
+{%
+    \gg
+}
+
+\newcommand{\lsl}
+{%
+    \ll
+}
+
+\newcommand{\flags}[1]
+{%
+    \texttt{#1}%
+}
+
+
+\newcommand{\Lg}
+{
+    \log_2 N  % log base 2 of N
+}                  
+\newcommand{\NL}
+{
+    N\log_2 N  % N log2 N
+}               
+\newcommand{\hNL}
+{
+    \tfrac{N}{2}\log_2 N    % (N/2) log2 N  -- the per-butterfly unit
+}    
+
+\newcommand{\NLm}
+{
+    N(\log_2 N - 1)       % M85 butterfly-loop unit
+}   
+
+\newcommand{\E}{\;}                        % empty CM-85 cell filler
+
+
+\newcommand{\ditto}{---''---}
+
+\makeatletter
+\newcommand\xleftrightarrow[2][]{%
+\ext@arrow 9999{\longleftrightarrowfill@}{#1}{#2}}
+\newcommand\longleftrightarrowfill@{%
+\arrowfill@\leftarrow\relbar\rightarrow}
+\makeatother
+
+\tikzstyle{startstop} = [rectangle, rounded corners, 
+minimum width=3cm, 
+minimum height=1cm,
+text centered, 
+draw=black]
+
+\tikzstyle{io} = [trapezium, 
+trapezium stretches=true,
+trapezium left angle=70, 
+trapezium right angle=110, 
+minimum width=3cm, 
+minimum height=1cm, text centered, 
+draw=black]
+
+\tikzstyle{process} = [rectangle, 
+minimum width=3cm, 
+minimum height=1cm, 
+text centered, 
+text width=3cm, 
+draw=black]
+
+\tikzstyle{decision} = [diamond, 
+minimum width=3cm, 
+minimum height=1cm, 
+text centered, 
+draw=black]

@@ -1,0 +1,18 @@
+\input{../../00_Common/venotesp.tex}
+\begin{document}
+\renewcommand{\thepage}{Front cover}
+\includepdf[pages=1]{../../00_Common/RX_ISA_QRG_Cover.pdf}
+\renewcommand{\thepage}{Copyright}
+\includepdf[pages=2]{../../00_Common/RX_ISA_QRG_Cover.pdf}
+\pagenumbering{arabic}     % Abstract = page 1
+\pagestyle{plain}
+
+\input{qrg/rx.tex}
+
+\bibliography{../../00_Common/ref}
+\bibliographystyle{plainurl}
+\printindex
+\clearpage
+\renewcommand{\thepage}{Back cover}
+\includepdf[pages=3]{../../00_Common/RX_ISA_QRG_Cover.pdf}
+\end{document}

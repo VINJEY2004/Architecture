@@ -1,0 +1,2263 @@
+%
+% Computer Architecture References
+%
+% A. Computer Architecture Reference (Architecture Independent)
+% B. Renesas RX Architecture
+% C. ARM Archictecture
+% D. RISC-V Architecture
+% E. Texas Instruments DSP Architecture
+% F. x86 Architecture
+% G. GPU
+% H. Hexagon
+% I. Misc
+%
+
+%
+% A. Computer Architecture References (Architecture Independent)
+%     1. Books
+%     2. Lectures
+%     3. Papers and Articles
+%     4. Tools and Demos
+%
+
+% 
+% 1. Books
+%
+
+@BOOK{hp_ca,
+    TITLE = "Computer Architecture - A Quantitative Approach (Sixth edition)",
+    AUTHOR = "John L Hennessy and David A Patterson",
+    YEAR = "2019",
+    PUBLISHER = "Morgan Kaufmann",
+    ISBN = "978-93-5107-365-9",
+    URL = "https://www.amazon.in/Computer-Architecture-Quantitative-Approach-6Th/dp/9351073653"
+}
+
+@BOOK{ph_cod,
+    TITLE = "Computer Organization and Design - The Hardware/Software Interface (ARM Edition)",
+    AUTHOR = "David A Patterson and John L Hennessy",
+    YEAR = "2010",
+    PUBLISHER = "Morgan Kaufmann",
+    ISBN = "978-8131222744",
+    URL = "https://www.amazon.in/Computer-Organization-Design-Patterson/dp/8131222748"
+}
+
+@BOOK{hh_ddca,
+    TITLE = "Digital Design and Computer Architecture",
+    AUTHOR = "David Money Harris and Sarah L Harris",
+    YEAR = "2013",
+    PUBLISHER = "Morgan Kaufmann",
+    ISBN = "978-0123944245",
+    URL = "https://www.amazon.in/Digital-Design-Computer-Architecture-Harris/dp/0123944244"
+}
+
+@BOOK{koren_ca,
+    TITLE = "Computer Arithmetic Algorithms",
+    AUTHOR = "Israel Koren",
+    EDITION = "Second",
+    PUBLISHER = "A K Peters",
+    YEAR = "2002",
+    URL = "https://www.routledge.com/Computer-Arithmetic-Algorithms/Koren/p/book/9781568811604"
+}
+
+@BOOK{bh_cspp,
+    TITLE = "Computer Systems: A Programmer's Perspective",
+    AUTHOR = "Randal E. Bryant and PictureDavid R. O'Hallaron",
+    EDITION = "third",
+    YEAR = "2015",
+    PUBLISHER = "Pearson",
+    ISBN = "978-0134092669",
+    URL = "https://dl.acm.org/doi/book/10.5555/2809088"
+}
+
+@BOOK{denis_perf,
+    TITLE = "Performance Analysis and Tuning on Modern CPUs",
+    AUTHOR = "Denis Bakhvalov",
+    EDITION = "Second",
+    YEAR = "2024",
+    PUBLISHER = "Self-published",
+    URL = "https://github.com/dendibakh/perf-book/releases/tag/2.0_release"
+}
+
+%
+% 2. Lectures
+%
+
+@MISC{onur_mutlu_ddca_21,
+    TITLE = "Digital Design and Computer Architecture",
+    AUTHOR = "Onur Mutlu",
+    YEAR = "2021",
+    PUBLISHER = "ETH Zurich",
+    URL = "https://safari.ethz.ch/digitaltechnik/spring2021/doku.php?id=schedule"
+}
+
+@MISC{cmu_ece447,
+    TITLE = "Computer Architecture Lectures",
+    AUTHOR = "Prof. ONur Mutlu",
+    PUBLISHER = "Carnegie Mellon University",
+    URL = "https://www.youtube.com/watch?v=zLP_X4wyHbY&list=PL5PHm2jkkXmi5CxxI7b3JCL1TWybTDtKq"
+}
+
+@MISC{hh_yt,
+    TITLE = "Digital Design and Computer Architecture",
+    AUTHOR = "David Money Harris and Sarah L Harris",
+    URL = "https://www.youtube.com/@sarahharris6912/videos"
+}
+
+@MISC{ucb_cs152,
+    TITLE = "CS152/252A Spring 2023 - Computer Architecture and Engineering",
+    AUTHOR = "Sophia Shao",
+    PUBLISHER = "University of California, Berkeley",
+    URL = "https://inst.eecs.berkeley.edu/~cs152/sp23/"
+}
+
+@MISC{cmu_ics_f15,
+    TITLE = "15-213/18-213/15-513: Intro to Computer Systems",
+    AUTHOR = "Randy Bryant and Franz Franchetti and Dave O'Hallaron",
+    YEAR = "2015",
+    URL = "https://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/index.html"
+}
+
+@MISC{pe_mit_f18,
+    TITLE = "Performance Engineering of Software Systems",
+    AUTHOR = "Charles Leiserson and Julian Shun",
+    YEAR = "2018",
+    URL = "https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/"
+}
+
+%
+% 3. Papers and Articles
+%
+
+@ARTICLE{tomasulo_paper,
+    TITLE = "An Efficient Algorithm for Exploiting Multiple Arithmetic Units",
+    AUTHOR = "R. M. Tomasulo",
+    YEAR = "1967",
+    JOURNAL = "IBM Journal of Research and Development",
+    VOLUME = "11",
+    NUMBER = "1",
+    PAGES = "25--33",
+    URL = "https://www.cs.virginia.edu/~evans/greatworks/tomasulo.pdf"
+}
+
+@MISC{memory_every,
+    TITLE = "What Every Programmer Should Know About Memory",
+    AUTHOR = "Ulrich Drepper",
+    YEAR = "2007",
+    URL = "https://akkadia.org/drepper/cpumemory.pdf"
+}
+
+@ARTICLE{sm_bp_survey,
+    TITLE = "A Survey of Techniques for Dynamic Branch Prediction",
+    AUTHOR = "Sparsh Mittal",
+    YEAR = "2018",
+    JOURNAL = "Concurrency and Computation: Practice and Experience",
+    DOI = "10.1002/cpe.4666",
+    URL = "https://www.researchgate.net/publication/324166804_A_Survey_of_Techniques_for_Dynamic_Branch_Prediction"
+}
+
+@TECHREPORT{riscv_cext_waterman,
+    TITLE = "Improving Energy Efficiency and Reducing Code Size with RISC-V Compressed",
+    AUTHOR = "Andrew S. Waterman",
+    YEAR = "2011",
+    INSTITUTION = "University of California at Berkeley",
+    NUMBER = "UCB/EECS-2011-63",
+    URL = "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2011/EECS-2011-63.pdf"
+}
+
+@MISC{bp2014_papers,
+    TITLE = "Championship Branch Prediction Program - 2014",
+    KEY = "Championship Branch Prediction Program - 2014",
+    URL = "https://jilp.org/cbp2014/program.html"
+}
+
+@MISC{bp2016,
+    TITLE = "Championship Branch Prediction - 2016",
+    KEY = "Championship Branch Prediction - 2016",
+    URL = "https://jilp.org/cbp2016/"
+}
+
+@INPROCEEDINGS{cache_wb_design_tradeoff,
+    TITLE = "Design Issues and Tradeoffs for Write Buffers",
+    AUTHOR = "Kevin Skadron and Douglas W. Clark",
+    YEAR = "1997",
+    DOI = "10.1109/HPCA.1997.569650",
+    BOOKTITLE = "Proceedings of the Third International Symposium on High-Performance Computer Architecture (HPCA)",
+    URL = "https://ieeexplore.ieee.org/document/569650"
+}
+
+@PHDTHESIS{abel_thesis,
+    TITLE = "Automatic Generation of Models of Microarchitectures",
+    AUTHOR = "Andreas Abel",
+    YEAR = "2020",
+    SCHOOL = "Saarland University",
+    URL = "https://uops.info/dissertation.pdf"
+}
+
+@INPROCEEDINGS{abel_uops,
+    TITLE = "uops.info: Characterizing Latency, Throughput and Port Usage of Instructions on Intel Microarchitectures",
+    AUTHOR = "Andreas Abel and Jan Reineke",
+    YEAR = "2019",
+    BOOKTITLE = "Proceedings of the 24th International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)",
+    URL = "https://arxiv.org/pdf/1810.04610"
+}
+
+@MISC{agner_opt,
+    TITLE = "Test programs for measuring clock cycles and performance monitoring",
+    AUTHOR = "Agner Fog",
+    URL = "https://agner.org/optimize/testp.zip"
+}
+
+@ARTICLE{charles_pe_paper,
+    TITLE = "There's plenty of room at the Top: What will drive computer performance after Moore's law?",
+    AUTHOR = "Charles E. Leiserson and Neil C. Thompson and Joel S. Emer and Bradley C. Kuszmaul and Butler W. Lampson and Daniel Sanchez and Tao B. Schardl",
+    JOURNAL = "Science",
+    VOLUME = "368",
+    NUMBER = "6495",
+    PAGES = "eaam9744",
+    MONTH = "Jun",
+    YEAR = "2020",
+    DOI = "10.1126/science.aam9744",
+    URL = "https://www.science.org/doi/abs/10.1126/science.aam9744"
+}
+
+@MISC{knuth_mmix,
+    TITLE  = "{MMIX} 2009: A {RISC} Computer for the Third Millennium",
+    AUTHOR = "Donald E. Knuth",
+    URL    = "https://cs.stanford.edu/~knuth/mmix.html",
+    NOTE   = "Accessed Oct-2026"
+}
+
+%
+% 4. Tools and Demos
+%
+
+@MISC{cpulator_rv32,
+    TITLE = "{CPUlator} {RISC-V} {RV32} System Simulator",
+    AUTHOR = "Henry Wong",
+    URL = "https://cpulator.01xz.net/?sys=rv32-spim"
+}
+
+@MISC{jsspim,
+    TITLE = "{JsSpim} -- Online {MIPS32} Simulator Based on {Spim}",
+    AUTHOR = "Shawn Zhong",
+    NOTE = "Source: https://github.com/ShawnZhong/JsSpim",
+    URL = "https://shawnzhong.com/JsSpim/"
+}
+
+@MISC{riscv_interactive_sim,
+    TITLE = "Interactive {RISC-V} Simulator",
+    KEY = "Interactive RISC-V Simulator",
+    URL = "https://riscv-simulator-five.vercel.app/"
+}
+
+@MISC{riscv_web_sim,
+    TITLE = "{RISC-V} Web Simulator",
+    AUTHOR = "Joel Mun",
+    NOTE = "Based on the Kite simulator. Source: https://github.com/9oelM/risc-v-web-simulator",
+    URL = "https://riscv.vercel.app/"
+}
+
+@ARTICLE{creator,
+    TITLE = "{CREATOR}: An Educational Integrated Development Environment for {RISC-V} Programming",
+    AUTHOR = "Diego Camarmas-Alonso and F{\'e}lix Garcia-Carballeira and Alejandro Calderon-Mateos and Elias del-Pozo-Pu{\~n}al",
+    JOURNAL = "IEEE Access",
+    VOLUME = "12",
+    PAGES = "127702--127717",
+    YEAR = "2024",
+    NOTE = "Online: https://creatorsim.github.io/creator/",
+    URL = "https://hdl.handle.net/10016/46494"
+}
+
+@MISC{arm_gmas,
+    TITLE = "Graphical Micro-Architecture Simulator",
+    AUTHOR = "{Arm Education}",
+    NOTE = "Browser-based LEGv8 single-cycle and pipelined CPU simulator, beta",
+    URL = "https://github.com/arm-education/Graphical-Micro-Architecture-Simulator"
+}
+
+@MISC{armvis,
+    TITLE = "{ARM64} Instruction Set Visualization",
+    AUTHOR = "Zachary Yedidia",
+    NOTE = "Generated from Arm Machine Readable Architecture. Source: https://github.com/zyedidia/armvis",
+    URL = "https://zyedidia.github.io/arm64/index.html"
+}
+
+@MISC{rvcodecjs,
+    TITLE = "rvcodec.js: {RISC-V} Instruction Encoder/Decoder",
+    AUTHOR = "{LupLab, UC Davis}",
+    URL = "https://luplab.gitlab.io/rvcodecjs/"
+}
+
+%
+% B. Renesas RX Architecture
+%    1. Instruction Set Reference Manuals
+%    2. Group User Manuals
+%    3. Toolchain and related documents
+%    4. Microarchitecture related references
+%    5. Performance Library
+%
+
+%
+% 1. RX Instruction Set Reference User Manuals
+%
+
+@BOOK{rx_v1_um,
+    TITLE = "RX Family RXv1 Instruction Set Architecture: User's Manual: Software",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01US0032EJ0130 Rev. 1.30",
+    MONTH = "Dec",
+    YEAR = "2019",
+    URL = "https://www.renesas.com/us/en/document/mas/rx-family-rxv1-instruction-set-architecture-users-manual-software-rev130"
+}
+
+@BOOK{rx_v2_um,
+    TITLE = "RX Family RXv2 Instruction Set Architecture: User's Manual: Software",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01US0071EJ0100 Rev. 1.00",
+    MONTH = "Nov",
+    YEAR = "2013",
+    URL = "https://www.renesas.com/us/en/document/mas/rx-family-rxv2-instruction-set-architecture-users-manual-software"
+}
+
+@BOOK{rx_v3_um,
+    TITLE = "RX Family RXv3 Instruction Set Architecture: User's Manual: Software",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01US0316EJ0100 Rev. 1.00",
+    MONTH = "Nov",
+    YEAR = "2018",
+    URL = "https://www.renesas.com/us/en/document/mas/rx-family-rxv3-instruction-set-architecture-users-manual-software-rev100"
+}
+
+%
+% 2. RX Group User Manuals
+%
+
+% RX100 Series
+@BOOK{rx_110,
+    TITLE = "RX110 Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0421EJ0120 Rev. 1.20",
+    MONTH = "Jul",
+    YEAR = "2016",
+    URL = "https://www.renesas.com/us/en/RX110"
+}
+
+@BOOK{rx_111,
+    TITLE = "RX111 Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0365EJ0130 Rev. 1.30",
+    MONTH = "May",
+    YEAR = "2016",
+    URL = "https://www.renesas.com/us/en/RX111"
+}
+
+@BOOK{rx_113,
+    TITLE = "RX113 Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0448EJ0120 Rev. 1.20",
+    MONTH = "Sep",
+    YEAR = "2020",
+    URL = "https://www.renesas.com/us/en/RX113"
+}
+
+@BOOK{rx_130,
+    TITLE = "RX130 Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0560EJ0300 Rev. 3.00",
+    MONTH = "Aug",
+    YEAR = "2018",
+    URL = "https://www.renesas.com/us/en/RX130"
+}
+
+@BOOK{rx_13T,
+    TITLE = "RX13T Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0822EJ0110 Rev. 1.10",
+    MONTH = "Mar",
+    YEAR = "2021",
+    URL = "https://www.renesas.com/us/en/RX13T"
+}
+
+@BOOK{rx_14T,
+    TITLE = "RX14T Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH1126EJ0102 Rev. 1.02",
+    MONTH = "Dec",
+    YEAR = "2025",
+    URL = "https://www.renesas.com/us/en/RX14T"
+}
+
+@BOOK{rx_140,
+    TITLE = "RX140 Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0905EJ0110 Rev. 1.10",
+    MONTH = "Apr",
+    YEAR = "2022",
+    URL = "https://www.renesas.com/us/en/RX140"
+}
+
+% RX200 Series
+@BOOK{rx_26t,
+    TITLE = "RX26T Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0979EJ0101 Rev. 1.01",
+    MONTH = "Mar",
+    YEAR = "2023",
+    URL = "https://www.renesas.com/us/en/RX26T"
+}
+
+@BOOK{rx_260,
+    TITLE = "RX260 Group, RX261 Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH1045EJ0100 Rev. 1.00",
+    MONTH = "Jul",
+    YEAR = "2024",
+    URL = "https://www.renesas.com/us/en/RX260"
+}
+
+@BOOK{rx_23w,
+    TITLE = "RX23W Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0823EJ0110 Rev. 1.10",
+    MONTH = "Mar",
+    YEAR = "2021",
+    URL = "https://www.renesas.com/us/en/RX23W"
+}
+
+@MANUAL{rx_220,
+    TITLE = "RX220 Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    URL = "https://www.renesas.com/us/en/RX220"
+}
+
+@BOOK{rx_230,
+    TITLE = "RX230 Group, RX231 Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0496EJ0120 Rev. 1.20",
+    MONTH = "Sep",
+    YEAR = "2018",
+    URL = "https://www.renesas.com/us/en/RX230"
+}
+
+@BOOK{rx_231,
+    TITLE = "RX230 Group, RX231 Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0496EJ0120 Rev. 1.20",
+    MONTH = "Sep",
+    YEAR = "2018",
+    URL = "https://www.renesas.com/us/en/RX231"
+}
+
+@BOOK{rx_23t,
+    TITLE = "RX23T Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0520EJ0110 Rev. 1.10",
+    MONTH = "Jan",
+    YEAR = "2016",
+    URL = "https://www.renesas.com/us/en/RX23T"
+}
+
+@BOOK{rx_24t,
+    TITLE = "RX24T Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0576EJ0200 Rev. 2.00",
+    MONTH = "Apr",
+    YEAR = "2017",
+    URL = "https://www.renesas.com/us/en/RX24T"
+}
+
+@BOOK{rx_24u,
+    TITLE = "RX24U Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0658EJ0100 Rev. 1.00",
+    MONTH = "Mar",
+    YEAR = "2017",
+    URL = "https://www.renesas.com/us/en/RX24U"
+}
+
+@MANUAL{rx_210,
+    TITLE = "RX210 Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    URL = "https://www.renesas.com/us/en/RX210"
+}
+
+@MANUAL{rx_21a,
+    TITLE = "RX21A Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    URL = "https://www.renesas.com/us/en/RX21A"
+}
+
+@BOOK{rx_23ea,
+    TITLE = "RX23E-A Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0801EJ0120 Rev. 1.20",
+    MONTH = "Apr",
+    YEAR = "2022",
+    URL = "https://www.renesas.com/us/en/RX23E-A"
+}
+
+@BOOK{rx_23eb,
+    TITLE = "RX23E-B Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0972EJ0100 Rev. 1.00",
+    MONTH = "Aug",
+    YEAR = "2023",
+    URL = "https://www.renesas.com/us/en/RX23E-B"
+}
+ 
+% RX600 Series
+@MANUAL{rx_621,
+    TITLE = "RX621 Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    URL = "https://www.renesas.com/us/en/RX621"
+}
+
+@MANUAL{rx_62G,
+    TITLE = "RX62G Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    URL = "https://www.renesas.com/us/en/RX62G"
+}
+
+@MANUAL{rx_62n,
+    TITLE = "RX62N Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    URL = "https://www.renesas.com/us/en/RX62N"
+}
+
+@MANUAL{rx_62t,
+    TITLE = "RX62T Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    URL = "https://www.renesas.com/us/en/RX62T"
+}
+
+@MANUAL{rx_630,
+    TITLE = "RX630 Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    URL = "https://www.renesas.com/us/en/RX630"
+}
+
+@MANUAL{rx_631,
+    TITLE = "RX631 Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    URL = "https://www.renesas.com/us/en/RX631"
+}
+
+@MANUAL{rx_634,
+    TITLE = "RX634 Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    URL = "https://www.renesas.com/us/en/RX634"
+}
+
+@MANUAL{rx_63n,
+    TITLE = "RX63N Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    URL = "https://www.renesas.com/us/en/RX63N"
+}
+
+@MANUAL{rx_63t,
+    TITLE = "RX63T Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    URL = "https://www.renesas.com/us/en/RX63T"
+}
+
+@BOOK{rx_64M,
+    TITLE = "RX64M Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0377EJ0120 Rev.1.20",
+    MONTH = "Oct",
+    YEAR = "2022",
+    URL = "https://www.renesas.com/us/en/RX64M"
+}
+ 
+@BOOK{rx_651,
+    TITLE = "RX65N Group, RX651 Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0590EJ0230 Rev. 2.30",
+    MONTH = "Jun",
+    YEAR = "2019",
+    URL = "https://www.renesas.com/us/en/RX651"
+}
+
+@BOOK{rx_65n,
+    TITLE = "RX65N Group, RX651 Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0590EJ0230 Rev. 2.30",
+    MONTH = "Jun",
+    YEAR = "2019",
+    URL = "https://www.renesas.com/us/en/RX65N"
+}
+
+@BOOK{rx_65wa,
+    TITLE = "RX65W-A Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0993EJ0110 Rev.1.10",
+    MONTH = "Apr",
+    YEAR = "2023",
+    URL = "https://www.renesas.com/us/en/RX65W-A"
+}
+
+@BOOK{rx_660,
+    TITLE = "RX660 Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0937EJ0100 Rev. 1.00",
+    MONTH = "Mar",
+    YEAR = "2022",
+    URL = "https://www.renesas.com/us/en/RX660"
+}
+
+@BOOK{rx_66n,
+    TITLE = "RX66N Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0825EJ0111 Rev. 1.11",
+    MONTH = "Feb",
+    YEAR = "2021",
+    URL = "https://www.renesas.com/us/en/RX66N"
+}
+
+@BOOK{rx_66t,
+    TITLE = "RX66T Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0749EJ0121 Rev. 1.21",
+    MONTH = "Apr",
+    YEAR = "2022",
+    URL = "https://www.renesas.com/us/en/RX66T"
+}
+
+@BOOK{rx_671,
+    TITLE = "RX671 Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0899EJ0110 Rev. 1.10",
+    MONTH = "Apr",
+    YEAR = "2022",
+    URL = "https://www.renesas.com/us/en/RX671"
+}
+
+% 700 Series
+@BOOK{rx_71m,
+    TITLE = "RX71M Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0493EJ0120 Rev. 1.20",
+    MONTH = "Oct",
+    YEAR = "2022",
+    URL = "https://www.renesas.com/us/en/RX71M"
+}
+
+@BOOK{rx_72m,
+    TITLE = "RX72M Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0804EJ0111 Rev. 1.11",
+    MONTH = "Feb",
+    YEAR = "2021",
+    URL = "https://www.renesas.com/us/en/RX72M"
+}
+
+@BOOK{rx_72n,
+    TITLE = "RX72N Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0824EJ0111 Rev. 1.11",
+    MONTH = "Feb",
+    YEAR = "2021",
+    URL = "https://www.renesas.com/us/en/RX72N"
+}
+
+@BOOK{rx_72t,
+    TITLE = "RX72T Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH0803EJ0100 Rev. 1.00",
+    MONTH = "May",
+    YEAR = "2019",
+    URL = "https://www.renesas.com/us/en/RX72T"
+}
+
+@BOOK{rx_74n,
+    TITLE = "RX74N Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH1056EJ0110 Rev.1.10",
+    MONTH = "Jul",
+    YEAR = "2026",
+    URL = "https://www.renesas.com/en/products/rx74n"
+}
+
+@BOOK{rx_74m,
+    TITLE = "RX74M Group: User's Manual: Hardware",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R01UH1055EJ0110 Rev.1.10",
+    MONTH = "Jul",
+    YEAR = "2026",
+    URL = "https://www.renesas.com/en/products/rx74m"
+}
+
+%
+% 3. RX Toolchain and Related documents
+%
+
+% Toolchain user manual
+@BOOK{rx_compiler,
+    TITLE = "RX Family C/C++ Compiler, Assembler, Optimizing Linkage Editor - Compiler Package User's Manual",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    NOTE = "R20UT3248EJ0112 Rev. 1.12",
+    MONTH = "Dec",
+    YEAR = "2022",
+    URL = "https://www.renesas.com/us/en/document/mat/rx-family-cc-compiler-package-users-manual"
+}
+
+% Inline assembly for v2 DSP instructions
+@MANUAL{rx_v2_dsp_inline,
+    AUTHOR       = "{Renesas Electronics Corporation}",
+    TITLE        = "{RX} Family {RXv2} {CPU} Products: An Example of {C}-Language Program to Use {DSP} Instructions",
+    ORGANIZATION = "Renesas Electronics Corporation",
+    NUMBER       = "R01AN3956EJ0100",
+    EDITION      = "Rev.1.00",
+    MONTH        = "Oct",
+    YEAR         = "2017",
+    URL          = "https://www.renesas.com/en/document/scd/rx-family-rxv2-cpu-products-example-c-language-program-use-dsp-instructions-rev100-sample-code",
+    URLDATE      = "2026-10-26",
+    NOTE         = "Application note and sample code (ZIP); inline-assembly definitions in r_dsp_inst_rxv2.h"
+}
+
+% How MAC operations work
+@MISC{rx_mac,
+    TITLE = "RX Family: Using Multiply-Accumulate Operation Instructions",
+    AUTHOR = "Renesas Electronics",
+    PUBLISHER = "Renesas Electronics",
+    URL = "https://www.renesas.com/us/en/document/apn/rx-family-application-note-using-multiply-accumulate-operation-instructions-rev100?language=en"
+}
+
+%
+% 4. RX Microarchitecture details
+%
+
+@MISC{rxv3_details,
+    TITLE = "Introducing RXv3 Core: Superior Performance with Excellent Power Efficiency",
+    AUTHOR = "Renesas Electronics",
+    NOTE = "White paper",
+    MONTH = "Oct",
+    YEAR = "2019",
+    PUBLISHER = "Renesas Electronics",
+    URL = "https://www.renesas.com/us/en/document/whp/introducing-rxv3-core-superior-performance-excellent-power-efficiency"
+}
+
+@MISC{rx_ooo,
+    TITLE = "{RXv2}---The Core with More",
+    AUTHOR = "John Donovan",
+    NOTE = "RX Blog, Renesas Engineering Community",
+    MONTH = "Nov",
+    YEAR = "2013",
+    URL = "https://community.renesas.com/the_vault/doctor_micro/rx_blog/b/weblog/posts/rxv2-the-core-with-more"
+}
+
+@MISC{rx_brochure,
+    TITLE = "RX Family Renesas 32-Bit Microcontrollers",
+    AUTHOR = "Renesas Electronics",
+    NOTE = "Brochure, 2025.09",
+    MONTH = "Sep",
+    YEAR = "2025",    
+    PUBLISHER = "Renesas Electronics",
+    URL = "https://www.renesas.com/en/document/bro/rx-family-brochure?r=469296"
+}
+
+@MISC{rx_v2_paper,
+    TITLE = "RX v2: Renesas's New-Generation MCU Processor",
+    AUTHOR = "Sugako Otani and Hiroyuki Kondo",
+    PUBLISHER = "Renesas Electronics",
+    URL = "https://www.researchgate.net/publication/281264007_RX_v2_Renesas's_new-generation_MCU_processor"
+}
+
+% 5. Performance library
+@MANUAL{rx_dsplib,
+    AUTHOR       = "{Renesas Electronics Corporation}",
+    TITLE        = "{RX} {DSP} Library Version 5.0",
+    ORGANIZATION = "Renesas Electronics Corporation",
+    NUMBER       = "R01AN4359EJ0100",
+    EDITION      = "Rev.1.00",
+    YEAR         = "2019",
+    URL          = "https://www.renesas.com/en/software-tool/dsp-library-rx-family",
+    URLDATE      = "2026-10-26",
+    NOTE         = "Distributed as a ZIP package containing the library, the user manual
+                    (RX DSP Library APIs Version 5.0 -- User Manual: Software), and
+                    additional-information documents with execution cycle counts for
+                    RXv1, RXv2 and RXv3 (e.g.\ R01AN4362EJ0100 for RXv3). CC-RX only."
+}
+
+%
+% C. ARM Architecture Related Details
+%    1. Architecture Reference Manuals and Quick Reference Guides
+%    2. Technical Reference Manuals, Software Optimization Guides and Data sheets
+%    3. Cycles Details from other sources
+%    4. Toolchain related
+%    5. Performance Libraries
+%    6. Misc
+%
+
+%
+% 1. Architecture Reference Manuals and Quick Reference Guides
+%
+
+% Classic
+@BOOK{aarch32_classic_arch_ref_manual,
+    TITLE = "ARM Architecture Reference Manual",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2005",
+    URL = "https://documentation-service.arm.com/static/5f8dacc8f86e16515cdb865a"
+}
+
+% v6m
+@BOOK{aarch32_arch_ref_manual_6m,
+    TITLE = "{ARMv6-M} Architecture Reference Manual ({DDI} 0419)",
+    AUTHOR = "{Arm Limited}",
+    PUBLISHER = "Arm Limited",
+    YEAR = "2010",
+    URL = "https://developer.arm.com/documentation/ddi0419/latest/"
+}
+
+% v7m
+@BOOK{aarch32_arch_ref_manual_7m,
+    TITLE = "ARMv7M Architecture Reference Manual (DDI 0403E)",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2021",
+    URL = "https://developer.arm.com/documentation/ddi0403/latest/"
+}
+
+% v8m
+@BOOK{aarch32_arch_ref_manual_v8m,
+    TITLE = "{Armv8-M} Architecture Reference Manual ({DDI} 0553)",
+    AUTHOR = "{Arm Limited}",
+    PUBLISHER = "Arm Limited",
+    YEAR = "2018",
+    URL = "https://developer.arm.com/documentation/ddi0553/latest/"
+}
+
+% v7A/7R
+@BOOK{aarch32_arch_ref_manual_7a_7r,
+    TITLE = "ARM Architecture Reference Manual - ARMv7-A and ARMv7-R edition (DDI 0406)",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2018",
+    URL = "https://developer.arm.com/documentation/ddi0406/latest/"
+}
+
+% A-Profile
+@BOOK{aarch64_arch_ref_manual,
+    TITLE = "ARM Architecture Reference Manual for A-profile architecture (DDI 0487)",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2023",
+    URL = "https://developer.arm.com/documentation/ddi0487/latest/"
+}
+
+% R-Profile (32-bit)
+@BOOK{aarch32_rp_arch_ref_manual,
+    TITLE = "ARM Architecture Reference Manual for R-profile AArch32 architecture (DDI 11I353)",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2026",
+    URL = "https://support.arm.com/documentation/ddi111353/latest/"
+}
+
+% ARM/TH32 QRG
+@MANUAL{aarch32_arm_th32_isa_qref,
+    TITLE = "ARM and Thumb-2 Instruction Set Quick Reference Card",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2008",
+    URL = "https://developer.arm.com/documentation/qrc0001/latest/"
+}
+
+% TH16 QRG
+@MANUAL{aarch32_th16_isa_qref,
+    TITLE = "Thumb 16-bit Instruction Set Quick Reference Card",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2008",
+    URL = "https://developer.arm.com/documentation/qrc0006/latest/"
+}
+
+% VFP QRG
+@MANUAL{aarch32_vfp_isa_qref,
+    TITLE = "Vector Floating Point Instruction Set Quick Reference Card",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2008",
+    URL = "https://developer.arm.com/documentation/qrc0007/latest/"
+}
+
+%
+% 2. Technical Reference Manuals, Software Optimization Guides and Datasheets
+%
+
+% 7TDMI TRM
+@BOOK{aarch32_7tdmi_trm,
+    TITLE = "ARM7TDMI Technical Reference Manual (DDI 0029G)",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2001",
+    URL = "https://documentation-service.arm.com/static/5e8e1323fd977155116a3129"
+}
+
+% 9TDMI TRM
+@BOOK{aarch32_9tdmi_trm,
+    TITLE = "ARM9TDMI Technical Reference Manual (DDI 0180A)",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2000",
+    URL = "https://documentation-service.arm.com/static/5e8e356f88295d1e18d39b1c"
+}
+
+% 9ES TRM
+@BOOK{aarch32_9es_trm,
+    TITLE = "ARM9ES Technical Reference Manual (DDI 0165B)",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2009",
+    URL = "https://documentation-service.arm.com/static/5e8e2f18fd977155116a77fb"
+}
+
+% 926EJS TRM
+@BOOK{aarch32_926ejs_trm,
+    TITLE = "ARM926EJS Technical Reference Manual (DDI 0198D)",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2003",
+    URL = "https://ww1.microchip.com/downloads/en/DeviceDoc/ARM_926EJS_TRM.pdf"
+}
+
+% 946ES TRM
+@BOOK{aarch32_arm946es_trm,
+    TITLE = "ARM946ES Technical Reference Manual (DDI0201D)",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2007",
+    URL = "https://documentation-service.arm.com/static/5e8e3ee588295d1e18d3aa82"
+}
+
+% 1136 TRM
+@BOOK{aarch32_arm1136_trm,
+    TITLE = "ARM1136JF-S and ARM1136J-S Technical Reference Manual (DDI 0211K)",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2009",
+    URL = "https://developer.arm.com/documentation/ddi0211/latest/"
+}
+
+% 1156 TRM
+@BOOK{aarch32_arm1156_trm,
+    TITLE = "ARM1156T2-S Technical Reference Manual (DDI 0338G)",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2007",
+    URL = "https://documentation-service.arm.com/static/5e8e116188295d1e18d34a29"
+}
+
+% 1176 TRM
+@BOOK{aarch32_arm1176_trm,
+    TITLE = "ARM1176JZF-S Technical Reference Manual (DDI 0301H)",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2009",
+    URL = "https://documentation-service.arm.com/static/5e8e294efd977155116a6ca3"
+}
+
+% Cortex A8 TRM
+@BOOK{aarch32_ca8_trm,
+    TITLE = "Cortex-A8: Technical Reference Manual - r3p2",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2010",
+    URL = "https://developer.arm.com/documentation/ddi0344/latest/"
+}
+
+% Cortex M0 TRM
+@BOOK{aarch32_cm0_trm,
+    TITLE = "Cortex-M0: Technical Reference Manual - r0p0",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2009",
+    URL = "https://developer.arm.com/documentation/ddi0432/c/?lang=en"
+}
+
+% Cortex M0+ TRM
+@BOOK{aarch32_cm0p_trm,
+    TITLE = "Cortex-M0+: Technical Reference Manual - r0p1",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2012",
+    URL = "https://documentation-service.arm.com/static/60411750ee937942ba301773"
+}
+
+% Cortex M3 TRM
+@BOOK{aarch32_cm3_trm,
+    TITLE = "Cortex-M3: Technical Reference Manual - r2p1",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2016",
+    URL = "https://developer.arm.com/documentation/100165/0201/?lang=en"
+}
+
+% Cortex M4 TRM
+@BOOK{aarch32_cm4_trm,
+    TITLE = "Cortex-M4: Technical Reference Manual - r0p1",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2020",
+    URL = "https://developer.arm.com/documentation/100166/0001/?lang=en"
+}
+
+% Cortex M7 TRM
+@BOOK{aarch32_cm7_trm,
+    TITLE = "ARM Cortex-M7 Processor: Technical Reference Manual - r1p2",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2018",
+    URL = "https://developer.arm.com/documentation/ddi0489/f/?lang=en"
+}
+
+% Cortex M23 TRM
+@BOOK{aarch32_cm23_trm,
+    TITLE = "ARM Cortex-M23 Processor: Technical Reference Manual - r1p0",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2016",
+    URL = "https://developer.arm.com/documentation/ddi0550/c/?lang=en"
+}
+
+% Cortex M33 TRM
+@BOOK{aarch32_cm33_trm,
+    TITLE = "ARM Cortex-M33 Processor: Technical Reference Manual - r1p0",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2023",
+    URL = "https://developer.arm.com/documentation/100230/0100/?lang=en"
+}
+
+% Cortex M55 TRM
+@BOOK{aarch32_cm55_trm,
+    TITLE = "ARM Cortex-M55 Processor: Technical Reference Manual - r1p1",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2022",
+    URL = "https://developer.arm.com/documentation/101051/0002"
+}
+
+% Cortex M85 TRM
+@BOOK{aarch32_cm85_trm,
+    TITLE = "Arm {Cortex-M85} Processor: Technical Reference Manual - r1p0",
+    AUTHOR = "{Arm Limited}",
+    PUBLISHER = "Arm Limited",
+    YEAR = "2022",
+    URL = "https://developer.arm.com/documentation/101924/0100/?lang=en"
+}
+
+% A72 SOG
+@BOOK{arm_cortex_a72_oguide,
+    TITLE = "ARM Cortex A-72 Software Optimization Guide",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2015",
+    URL = "https://developer.arm.com/documentation/uan0016/latest/"
+}
+
+% M55 SOG
+@BOOK{arm_cortex_m55_oguide,
+    TITLE = "Arm Cortex-M55 Processor Software Optimization Guide",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2022",
+    URL = "https://developer.arm.com/documentation/102692/latest/"
+}
+
+% M85 SOG
+@BOOK{arm_cortex_m85_oguide,
+    TITLE = "Arm Cortex-M85 Processor Software Optimization Guide",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2023",
+    URL = "https://developer.arm.com/documentation/107950/latest/"
+}
+
+% M0 Datasheet
+@MANUAL{aarch32_cm0_ds,
+    TITLE = "ARM Cortex-M0 Processor Datasheet",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2020",
+    URL = "https://developer.arm.com/documentation/102834/0100/?lang=en"
+}
+
+% M0+ Datasheet
+@MANUAL{aarch32_cm0p_ds,
+    TITLE = "ARM Cortex-M0+ Processor Datasheet",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2020",
+    URL = "https://developer.arm.com/documentation/102835/0100/?lang=en"
+}
+
+% M3 Datasheet
+@MANUAL{aarch32_cm3_ds,
+    TITLE = "Arm Cortex-M3 Datasheet",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2020",
+    URL = "https://developer.arm.com/documentation/102831/0100/?lang=en"
+}
+
+% M4 Datasheet
+@MANUAL{aarch32_cm4_ds,
+    TITLE = "Arm Cortex-M4 Datasheet",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2020",
+    URL = "https://developer.arm.com/documentation/102832/0100/?lang=en"
+}
+
+% M7 Datasheet
+@MANUAL{aarch32_cm7_ds,
+    TITLE = "Arm Cortex-M7 Processor Datasheet",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2020",
+    URL="https://developer.arm.com/documentation/102838/0100/?lang=en"
+}
+
+% M23 Datasheet
+@MANUAL{aarch32_cm23_ds,
+    TITLE = "Arm Cortex-M23 Processor Datasheet",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2020",
+    URL="https://developer.arm.com/documentation/102836/0100/?lang=en"
+}
+
+% M33 Datasheet
+@MANUAL{aarch32_cm33_ds,
+    TITLE = "Arm Cortex-M33 Processor Datasheet",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2022",
+    URL="https://developer.arm.com/documentation/102839/0200/?lang=en"
+}
+
+% M55 Datasheet
+@MANUAL{aarch32_cm55_ds,
+    TITLE = "Arm Cortex-M55 Processor Datasheet",
+    AUTHOR = "ARM Limited",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2020",
+    URL="https://developer.arm.com/documentation/102833/0100/?lang=en"
+}
+
+%
+% 3. Cycles Information from other sources
+%
+
+@MISC{aarch32_cm7_cycles,
+    TITLE = "Cortex-M7 instruction cycle counts, timings, and dual-issue combinations",
+    KEY = "Cortex-M7 instruction cycle counts",
+    URL = "https://www.quinapalus.com/cm7cycles.html"
+}
+
+@MISC{gcc_arm_md_files,
+    TITLE = "GNU C Compiler MD Files for ARM",
+    KEY = "GNU C Compiler MD Files for ARM",
+    URL = "https://github.com/gcc-mirror/gcc/tree/master/gcc/config/arm"
+}
+
+@MISC{cm_cycles,
+    TITLE="Pipeline Cycle Tests",
+    KEY = "Pipeline Cycle Tests",
+    URL="https://github.com/jnk0le/random/tree/master/pipeline%20cycle%20test"
+}
+
+@MISC{cm33_cycles_na,
+    TITLE="Cortex-M33 instruction cycle counts?",
+    KEY = "Cortex-M33 instruction cycle counts?",
+    URL="https://community.st.com/t5/stm32-mcus-products/cortex-m33-instruction-cycle-counts/td-p/123198"
+}
+
+@MANUAL{ca8_design,
+    TITLE = "ARM Cortex A8: A High Performance Processor for Low Power Applications",
+    AUTHOR = "David Williamson",
+    PUBLISHER = "ARM",
+    URL = "https://web.archive.org/web/20150101062932/http://www.arm.com/files/pdf/A8_Paper.pdf"
+}
+
+@MISC{ca8_pipeline_error,
+    TITLE="Cortex-A8 Scheduling",
+    KEY = "Cortex-A8 Scheduling",
+    URL="https://groups.google.com/g/comp.sys.arm/c/Oq6LfUvrrC8?pli=1"
+}
+
+%
+% 4. Toolchain related
+%
+
+% Neon intrinsics
+@MISC{arm_neon_intrinsics,
+    TITLE = "Arm Neon Intrinsics Reference",
+    AUTHOR = "ARM Limited",
+    URL = "https://arm-software.github.io/acle/neon_intrinsics/advsimd.html"
+}
+
+% Helium intrinsics
+@MISC{arm_helium_intrinsics,
+    TITLE = "Arm MVE Intrinsics",
+    AUTHOR = "ARM Limited",
+    URL = "https://arm-software.github.io/acle/mve_intrinsics/mve.html"
+}
+
+% ARM C Language Extensions
+@MISC{arm_acle,
+    TITLE = "Arm C Language Extensions",
+    AUTHOR = "ARM Limited",
+    URL = "https://arm-software.github.io/acle/main/acle.html"
+}
+
+%
+% 5. Performance Libraries
+%
+
+% CMSIS DSP
+@MISC{cmsis_dsplib,
+    TITLE = "{CMSIS-DSP} Software Library",
+    AUTHOR = "{Arm Limited}",
+    URL = "https://arm-software.github.io/CMSIS-DSP/latest"
+}
+
+@MISC{cmsis_dsplib_doc,
+    TITLE = "{CMSIS-DSP} Software Library",
+    AUTHOR = "{Arm Limited}",
+    URL = "https://arm-software.github.io/CMSIS-DSP/latest/modules.html"
+}
+
+% CMSIS NN
+@MISC{cmsis_nn,
+    TITLE = "CMSIS NN Software Library",
+    AUTHOR = "{Arm Limited}",
+    URL = "https://arm-software.github.io/CMSIS-NN/latest/"
+}
+
+% Book based on CMSIS-DSP
+@BOOK{cm_dsp_book,
+    TITLE = "Digital Signal Processing using ARM Cortex M based Microcontrollers - Theory and Practice",
+    AUTHOR = "Cem Unsalan and M. Erkin Yucel and H. Deniz Gurhan",
+    PUBLISHER = "arm Education Media",
+    YEAR = "2018",
+    URL = "https://github.com/arm-university/Digital-Signal-Processing-using-Arm-Cortex-M-based-Microcontrollers/blob/main/DigitalSignalProcessing_textbook.pdf"
+}
+
+% CMSIS-NN Paper
+@MISC{cmsis_nn_paper,
+    TITLE = "CMSIS-NN: Efficient Neural Network Kernels for Arm Cortex-M CPUs", 
+    AUTHOR = "Liangzhen Lai and Naveen Suda and Vikas Chandra",
+    YEAR = "2018",
+    NOTE = "arXiv:1801.06601",
+    URL = "https://arxiv.org/abs/1801.06601", 
+}
+
+% Book covering helium at introductory level
+@BOOK{arm_helium_book,
+    TITLE = "Arm Helium Technology M-Profile Vector Extension (MVE) for Arm Cortex-M Processors",
+    AUTHOR = "Jon Marsh",
+    PUBLISHER = "ARM Education Media",
+    YEAR = "2020",
+    URL = "https://github.com/arm-university/Arm-Helium-Technology/blob/main/HeliumTechnology_referencebook.pdf"
+}
+
+%
+% 6. Misc
+%
+
+@BOOK{arm_sdev_guide,
+    TITLE = "ARM System Developer's Guide: Designing and Optimizing System Software",
+    AUTHOR = "Andrew Sloss and Chris Wright and Dominic Symes",
+    PUBLISHER = "Morgan Kaufmann",
+    YEAR = "2004",
+    URL = "https://www.amazon.in/ARM-System-Developers-Guide-Architecture/dp/1558608745"
+}
+
+@BOOK{helium_blog,
+    TITLE = "Arm Helium MVE Blog page",
+    AUTHOR = "Thomas Grocutt",
+    PUBLISHER = "ARM Limited",
+    YEAR = "2019",
+    URL = "https://developer.arm.com/community/arm-research/b/articles/posts/making-helium-why-not-just-add-neon"
+}
+
+%
+% D. RISC-V Architecture Related References
+%    1. Instruction Set References
+%    2. ABI and Assembly Programming
+%    3. Espressif RISC-V Cores Data sheet and Technical Reference Manuals
+%    4. Performance Libraries
+%    5. Misc
+%
+
+% 1. Instruction Set References
+@BOOK{riscv_isa_vol1,
+    TITLE = "The RISC-V Instruction Set Manual - Volume I: Unprivileged ISA, Document Version 20191213",
+    AUTHOR = "Andrew Waterman and Krste Asanovic",
+    PUBLISHER = "RISC-V Foundation",
+    YEAR = "2019",
+    URL = "https://github.com/riscv/riscv-isa-manual/releases/download/Ratified-IMAFDQC/riscv-spec-20191213.pdf"
+}
+
+@BOOK{riscv_isa_vol2,
+    TITLE = "The {RISC-V} Instruction Set Manual, Volume {II}: Privileged Architecture, Version 20240411",
+    AUTHOR = "Andrew Waterman and Krste Asanovi{\'c} and John Hauser",
+    PUBLISHER = "{RISC-V International}",
+    MONTH = "Apr",
+    YEAR = "2024",
+    URL = "https://github.com/riscv/riscv-isa-manual/releases/tag/20240411"
+}
+
+@BOOK{riscv_isa_vext,
+    TITLE = "RISC-V ``V'' Vector Extension - Version 1.0",
+    AUTHOR = "RISC-V Foundation",
+    PUBLISHER = "RISC-V Foundation",
+    YEAR = "2023",
+    URL = "https://github.com/riscv/riscv-v-spec/releases/download/v1.0/riscv-v-spec-1.0.pdf"
+}
+
+@BOOK{riscv_isa_pext,
+    TITLE = "RISC-V ``P'' Extension Proposal",
+    AUTHOR = "RISC-V Foundation",
+    PUBLISHER = "RISC-V Foundation",
+    YEAR = "2021",
+    URL = "https://github.com/riscv/riscv-p-spec/blob/master/P-ext-proposal.pdf"
+}
+
+@BOOK{riscv_reader,
+    TITLE = "The RISC-V Reader - An Open Architecture Atlas",
+    AUTHOR = "David Patterson and Andrew Waterman",
+    PUBLISHER = "Strawberry Canyon LLC",
+    YEAR = "2017",
+    URL = "http://riscvbook.com/"
+}
+
+@MISC{riscv_ref_card,
+    TITLE = "RISC-V Reference Card",
+    KEY = "RISC-V Reference Card",
+    URL = "http://riscvbook.com/greencard-20181213.pdf"
+}
+
+@MISC{riscv_ref_card1,
+    TITLE = "Appendix B. RISC-V Instruction Set Summary",
+    KEY = "Appendix B. RISC-V Instruction Set Summary",
+    URL = "https://pages.hmc.edu/harris/ddca/ddcarv/DDCArv_AppB_Harris.pdf"
+}
+
+@MISC{riscv_ref_card2,
+    TITLE = "Appendix B. RISC-V Instruction Set Summary",
+    KEY = "Appendix B. RISC-V Instruction Set Summary",
+    URL = "https://www.cs.sfu.ca/~ashriram/Courses/CS295/assets/notebooks/RISCV/RISCV_CARD.pdf"
+}
+
+% 2. ABI and Assembly Programming
+@MANUAL{riscv_psabi,
+    TITLE = "RISC-V ABI Specification",
+    AUTHOR = "RISC-V",
+    PUBLISHER = "RISC-V",
+    URL = "https://github.com/riscv-non-isa/riscv-elf-psabi-doc"
+}
+
+@MANUAL{riscv_alpm,
+    TITLE = "RISC-V Assembly Programmer Manual",
+    AUTHOR = "RISC-V",
+    PUBLISHER = "RISC-V",
+    URL = "https://github.com/riscv-non-isa/riscv-asm-manual/blob/master/riscv-asm.md"
+}
+
+@MANUAL{riscv_shakti_alpm,
+    TITLE = "RISC-V Assembly Language Programmer Manual (Part I)",
+    AUTHOR = "SHAKTI Development Team at IITM'20",
+    PUBLISHER = "SHAKTI.ORG.IN",
+    URL = "https://shakti.org.in/docs/risc-v-asm-manual.pdf"
+}
+
+@MANUAL{riscv_capi,
+    TITLE = "RISC-V C API Specification",
+    AUTHOR = "RISC-V Foundation",
+    PUBLISHER = "RISC-V Foundation",
+    URL = "https://github.com/riscv-non-isa/riscv-c-api-doc/blob/master/riscv-c-api.md"
+}
+
+@MANUAL{riscv_intrisics,
+    TITLE = "RISC-V Vector Extension Intrinsic document",
+    AUTHOR = "RISC-V Foundation",
+    PUBLISHER = "RISC-V Foundation",
+    URL = "https://github.com/riscv-non-isa/rvv-intrinsic-doc"
+}
+
+@MANUAL{riscv_toolchain,
+    TITLE = "RISC-V Toolchain Conventions",
+    AUTHOR = "RISC-V Foundation",
+    PUBLISHER = "RISC-V Foundation",
+    URL = "https://github.com/riscv-non-isa/riscv-toolchain-conventions"
+}
+
+% 3. Espressif RISC-V Cores Data Sheets and Technical Reference Manuals
+@BOOK{esp32_c3_ds,
+    TITLE = "ESP32-C3 Series Datasheet (Version 1.6)",
+    AUTHOR = "Espressif Systems",
+    PUBLISHER = "Espressif Systems",
+    YEAR = "2024",
+    URL = "https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf"
+}
+
+@BOOK{esp32_c3_trm,
+    TITLE = "ESP32-C3 Technical Reference Manual (Version 1.1)",
+    AUTHOR = "Espressif Systems",
+    PUBLISHER = "Espressif Systems",
+    YEAR = "2024",
+    URL = "https://www.espressif.com/sites/default/files/documentation/esp32-c3_technical_reference_manual_en.pdf"
+}
+
+@BOOK{esp32_c2_8684_ds,
+    TITLE = "ESP8684 Series Datasheet (Version 1.5)",
+    AUTHOR = "Espressif Systems",
+    PUBLISHER = "Espressif Systems",
+    YEAR = "2024",
+    URL = "https://www.espressif.com/sites/default/files/documentation/esp8684_datasheet_en.pdf"
+}
+
+@BOOK{esp32_c2_8684_trm,
+    TITLE = "ESP8684 Technical Reference Manual (Version 1.6)",
+    AUTHOR = "Espressif Systems",
+    PUBLISHER = "Espressif Systems",
+    YEAR = "2024",
+    URL = "https://www.espressif.com/sites/default/files/documentation/esp8684_technical_reference_manual_en.pdf"
+}
+
+@BOOK{esp32_c6_ds,
+    TITLE = "ESP32-C6 Series Datasheet (Version 1.0)",
+    AUTHOR = "Espressif Systems",
+    PUBLISHER = "Espressif Systems",
+    YEAR = "2023",
+    URL = "https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf"
+}
+
+@BOOK{esp32_c6_trm,
+    TITLE = "ESP32-C6 Technical Reference Manual (Pre-release Version 0.3)",
+    AUTHOR = "Espressif Systems",
+    PUBLISHER = "Espressif Systems",
+    YEAR = "2023",
+    URL = "https://www.espressif.com/sites/default/files/documentation/esp32-c6_technical_reference_manual_en.pdf"
+}
+
+@BOOK{esp32_h2_ds,
+    TITLE = "ESP32-H2 Series Datasheet (Prerelease v0.7)",
+    AUTHOR = "Espressif Systems",
+    PUBLISHER = "Espressif Systems",
+    YEAR = "2023",
+    URL = "https://www.espressif.com/sites/default/files/documentation/esp32-h2_datasheet_en.pdf"
+}
+
+@BOOK{esp32_h2_trm,
+    TITLE = "ESP32-H2 Series Technical Reference Manual (Prerelease v0.4)",
+    AUTHOR = "Espressif Systems",
+    PUBLISHER = "Espressif Systems",
+    YEAR = "2023",
+    URL = "https://www.espressif.com/sites/default/files/documentation/esp32-h2_technical_reference_manual_en.pdf"
+}
+
+@BOOK{esp32_c5_ds,
+    TITLE = "ESP32-C5 Series Datasheet  (Version 1.0)",
+    AUTHOR = "Espressif Systems",
+    PUBLISHER = "Espressif Systems",
+    YEAR = "2025",
+    URL = "https://www.espressif.com/sites/default/files/documentation/esp32-c5_datasheet_en.pdf"
+}
+
+@BOOK{esp32_c5_trm,
+    TITLE = "ESP32-C5 Series Technical Reference Manual (Prerelease v0.2)",
+    AUTHOR = "Espressif Systems",
+    PUBLISHER = "Espressif Systems",
+    YEAR = "2025",
+    URL = "https://www.espressif.com/sites/default/files/documentation/esp32-c5_technical_reference_manual_en.pdf"
+}
+
+@BOOK{esp32_c61_ds,
+    TITLE = "ESP32-C61 Series Datasheet (Prerelease v0.5)",
+    AUTHOR = "Espressif Systems",
+    PUBLISHER = "Espressif Systems",
+    YEAR = "2025",
+    URL = "https://www.espressif.com/sites/default/files/documentation/esp32-c61_datasheet_en.pdf"
+}
+
+@BOOK{esp32_c61_trm,
+    TITLE = "ESP32-C61 Series Technical Reference Manual (Prerelease v0.1)",
+    AUTHOR = "Espressif Systems",
+    PUBLISHER = "Espressif Systems",
+    YEAR = "2025",
+    URL = "https://www.espressif.com/sites/default/files/documentation/esp32-c61_technical_reference_manual_en.pdf"
+}
+
+@BOOK{esp32_p4_ds,
+    TITLE = "ESP32-P4 Series Datasheet (Prerelease v0.6)",
+    AUTHOR = "Espressif Systems",
+    PUBLISHER = "Espressif Systems",
+    YEAR = "2025",
+    URL = "https://www.espressif.com/sites/default/files/documentation/esp32-p4_datasheet_en.pdf"
+}
+
+@BOOK{esp32_p4_trm,
+    TITLE = "ESP32-P4 Series Technical Reference Manual (Prerelease v0.5)",
+    AUTHOR = "Espressif Systems",
+    PUBLISHER = "Espressif Systems",
+    YEAR = "2026",
+    URL = "https://www.espressif.com/sites/default/files/documentation/esp32-p4_technical_reference_manual_en.pdf"
+}
+
+% S3 (not risc-v, shares PIE with P4 having RISC-V. Two entries, remove since P4 TRM now has PIE details)
+@BOOK{esp32_s3_trm,
+    TITLE = "ESP32-S3 Series Technical Reference Manual (Version 1.8)",
+    AUTHOR = "Espressif Systems",
+    PUBLISHER = "Espressif Systems",
+    YEAR = "2026",
+    URL = "https://documentation.espressif.com/esp32-s3_technical_reference_manual_en.pdf"
+}
+
+@misc{esp32s3_trm,
+  title        = {{ESP32-S3 Technical Reference Manual}},
+  author       = {{Espressif Systems}},
+  year         = {2024},
+  note         = {Version 1.2},
+  url          = {https://www.espressif.com/sites/default/files/documentation/esp32-s3_technical_reference_manual_en.pdf}
+}
+
+%
+% 4. Performance Libraries
+%
+
+@MISC{esp_dsp_lib,
+    TITLE = "Espressif DSP Library",
+    AUTHOR = "Espressif Systems",
+    PUBLISHER = "Espressif Systems",
+    URL = "https://github.com/espressif/esp-dsp"
+}
+
+@MISC{esp_dsp_lib_perf,
+    TITLE = "Espressif DSP Library Benchmarks",
+    AUTHOR = "Espressif Systems",
+    PUBLISHER = "Espressif Systems",
+    URL = "https://docs.espressif.com/projects/esp-dsp/en/latest/esp32/esp-dsp-benchmarks.html"
+}
+
+@MISC{esp_nn,
+    TITLE = "ESP-NN",
+    AUTHOR = "Espressif Systems",
+    PUBLISHER = "Espressif Systems",
+    URL = "https://github.com/espressif/esp-nn"
+}
+
+@MISC{esp_dl,
+    TITLE = "ESP-DL",
+    AUTHOR = "Espressif Systems",
+    PUBLISHER = "Espressif Systems",
+    URL = "https://github.com/espressif/esp-dl"
+}
+
+%
+% 5. Misc
+%
+
+@MISC{esp_pie_blog,
+    TITLE = "Explore the PIE capabilities on the ESP32-P4",
+    AUTHOR = "Yan Ke",
+    PUBLISHER = "Espressif Systems",
+    URL = "https://developer.espressif.com/blog/2024/12/pie-introduction/"
+}
+
+
+@misc{espressif_pie_blog,
+  title        = {{Explore the PIE capabilities on the ESP32-P4}},
+  author       = {Ke, Yan},
+  year         = {2024},
+  howpublished = {Espressif Developer Portal blog},
+  url          = {https://developer.espressif.com/blog/2024/12/explore-pie-on-esp32-p4/}
+}
+
+@misc{p4_pie_port_notes,
+  title        = {{ESP32-P4 PIE Instruction Port Summary: Porting S3 Xtensa TIE Extensions to P4 RISC-V Custom Extensions}},
+  author       = {{VinjeyIntern Internship Project}},
+  year         = {2026},
+  note         = {Internal project report, unpublished}
+}
+
+%
+% E. Texas Instruments DSP Architecture
+%    1. ISA
+%    2. Memory and Cache
+%    3. Toolchain
+%    4. Optimization
+%    5. Codecs
+%
+
+% 1. ISA
+@BOOK{ti_c62x_isa,
+    TITLE = "TMS320C62x DSP CPU and Instruction Set Reference Guide (spru 731A)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2010",
+    URL = "https://www.ti.com/lit/ug/spru731a/spru731a.pdf"
+}
+
+@BOOK{ti_c67x_isa,
+    TITLE = "TMS320C67x/C67x+ DSP CPU and Instruction Set Reference Guide (spru 733A)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2006",
+    URL = "https://www.ti.com/lit/ug/spru733a/spru733a.pdf"
+}
+
+@BOOK{ti_c64x_isa,
+    TITLE = "TMS320C64x/C64x+ DSP CPU and Instruction Set Reference Guide (spru 732J)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2010",
+    URL = "https://www.ti.com/lit/ug/spru732j/spru732j.pdf"
+}
+
+@BOOK{ti_c674x_isa,
+    TITLE = "TMS320C674x DSP CPU and Instruction Set Reference Guide (sprufe8b)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2010",
+    URL = "https://www.ti.com/lit/ug/sprufe8b/sprufe8b.pdf"
+}
+
+@BOOK{ti_c66x_isa,
+    TITLE = "TMS320C66x DSP CPU and Instruction Set Reference Guide (sprugh7)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2010",
+    URL = "https://www.ti.com/lit/ug/sprugh7/sprugh7.pdf"
+}
+
+@BOOK{ti_c62x_c64x_c67x_isa,
+    TITLE = "TMS320C6000 CPU and Instruction Set Reference Guide",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "1999",
+    URL = "https://www.engr.colostate.edu/ECE423/docs/spru189f.pdf"
+}
+
+@MISC{ti_c6000_wshop,
+    TITLE = "C6000 Embedded Design Workshop",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2019",
+    URL = "https://www.ti.com/video/series/c6000-embedded-design-workshop.html"
+}
+
+@MISC{ti_c6000_wshop_dn,
+    TITLE = "TMS320C6000 Optimization Workshop",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2019",
+    URL = "https://software-dl.ti.com/trainingTTO/trainingTTO_public_sw/op6000/op6000_v1.51/op6000_student_guide_v1.51.pdf"
+}
+
+% 2. Memory and Cache
+@BOOK{ti_c62x_c67x_c64x_cache_ug,
+    TITLE = "TMS320C6000 DSP Cache User's Guide (SPRU656A)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2003",
+    URL = "https://www.ti.com/lit/ug/spru656a/spru656a.pdf"
+}
+
+@BOOK{ti_c64xp_cache_ug,
+    TITLE = "TMS320C64x+ DSP Cache User's Guide (SPRU862B)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2009",
+    URL = "https://www.ti.com/lit/ug/spru862b/spru862b.pdf"
+}
+
+@BOOK{ti_c674x_cache_ug,
+    TITLE = "TMS320C674x DSP Cache User's Guide (SPRUG82A)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2009",
+    URL = "https://www.ti.com/lit/ug/sprug82a/sprug82a.pdf"
+}
+
+@BOOK{ti_c66x_cache_ug,
+    TITLE = "TMS320C66x DSP Cache User's Guide (SPRUGY8)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2010",
+    URL = "https://www.ti.com/lit/ug/sprugy8/sprugy8.pdf"
+}
+
+@BOOK{ti_c62x_c67x_im_rg,
+    TITLE = "TMS320C621x/C671x DSP Two-Level Internal Memory Reference Guide (SPRU609B)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2004",
+    URL = "https://www.ti.com/lit/ug/spru609b/spru609b.pdf"
+}
+
+@BOOK{ti_c64x_im_rg,
+    TITLE = "TMS320C64x DSP Two-Level Internal Memory Reference Guide (SPRU610C)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2006",
+    URL = "https://www.ti.com/lit/ug/spru610c/spru610c.pdf"
+}
+
+@BOOK{ti_c64xp_dsp_mm_rg,
+    TITLE = "TMS320C64x+ DSP Megamodule Reference Guide (SPRU871K)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2010",
+    URL = "https://www.ti.com/lit/ug/spru871k/spru871k.pdf"
+}
+
+@BOOK{ti_c674x_dsp_mm_rg,
+    TITLE = "TMS320C674x DSP Megamodule Reference Guide (SPRUFK5A)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2010",
+    URL = "https://www.ti.com/lit/ug/sprufk5a/sprufk5a.pdf"
+}
+
+@BOOK{ti_c66x_cp_ug,
+    TITLE = "TMS320C66x DSP CorePac User Guide (SPRUGW0C)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2013",
+    URL = "https://www.ti.com/lit/ug/sprugw0c/sprugw0c.pdf"
+}
+
+% 3. Performance Libraries
+@MISC{ti_dsplib,
+    TITLE = "C64x+, C66x and C674x DSP Library",
+    KEY = "C64x+, C66x and C674x DSP Library",
+    URL = "https://www.ti.com/tool/download/C64XPLUS-C66X-C674X-DSPLIB/3.4.0.0"
+}
+
+@MISC{ti_c64x_dsplib,
+    TITLE = "Download TMS320C64x DSP Library",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2003",
+    URL = "https://www.ti.com/tool/download/C64X-DSPLIB"
+}
+
+@BOOK{ti_c67x_dsplib_pr,
+    TITLE = "TMS320C67x DSP Library Programmer's Reference Guide (SPRU657C)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2010",
+    URL = "https://www.ti.com/lit/ug/spru657c/spru657c.pdf"
+}
+
+
+@MISC{ti_c67x_dsplib,
+    TITLE = "Download TMS320C67x DSP Library",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2005",
+    URL = "https://www.ti.com/tool/download/C67X-DSPLIB"
+}
+
+@MISC{ti_c64xp_c674x_c66x_dsplib,
+    TITLE = "Download C64x+/C674x/C66x DSP Library",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2014",
+    URL = "https://www.ti.com/tool/download/C64XPLUS-C66X-C674X-DSPLIB/3.4.0.0"
+}
+
+@BOOK{ti_c64x_imglib_pg,
+    TITLE = "TMS320C64x+ DSP Image/Video Processing Library (v2.0.1) Programmer's Guide (SPRUF30A)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2008",
+    URL = "https://www.ti.com/lit/ug/spruf30a/spruf30a.pdf"
+}
+
+@MISC{ti_c64xp_c66x_imglib,
+    TITLE = "C64x+ and C66x image library",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2014",
+    URL = "https://www.ti.com/tool/SPRC264"
+}
+
+@MISC{ti_c6000_lib,
+    TITLE = "Royalty free DSP software libraries for the C6000 DSP",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2012",
+    URL = "https://www.youtube.com/watch?v=CYBTGUPFwU8"
+}
+
+@MISC{ti_vlib_article,
+    TITLE = "An optimized vision library approach for embedded systems",
+    AUTHOR = "Goksel Dedeoglu and Branislav Kisacanin and Darnell Moore and Vinay Sharma",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2011",
+    URL = "https://www.researchgate.net/publication/252028715_An_optimized_vision_library_approach_for_embedded_systems"
+}
+
+@MISC{ti_c64xp_c674x_c66x_vlib,
+    TITLE = "C6x+, C674x and C66x VLIB",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2013",
+    URL = "https://software-dl.ti.com/libs/vlib/3_0_0_7/index_FDS.html"
+}
+
+@BOOK{ti_vlib_rg,
+    TITLE = "Vision Libary (VLIB) Application Program Interface Reference Guide (SPRUG00C)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2009",
+    URL = "http://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/639/5001._5B00_SPRUG00C_5D00_-VLIB_5F00_2_5F00_1_5F00_API.pdf"
+}
+
+% 3. Toolchain
+@BOOK{ti_c6000_compiler,
+    TITLE = "TMS320C6000 Optimizing Compiler v7.4 User's Guide (SPRU187U)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2012",
+    URL = "https://www.ti.com/lit/ug/spru187u/spru187u.pdf"
+}
+
+@BOOK{ti_c6000_assembler,
+    TITLE = "TMS320C6000 Assembly Language Tools v7.4 User's Guide (SPRU186W)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2012",
+    URL = "https://www.ti.com/lit/ug/spru186w/spru186w.pdf"
+}
+
+@BOOK{ti_c6000_pg,
+    TITLE = "TMS320C6000 Programmer's Guide (SPRU198K)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2011",
+    URL = "https://www.ti.com/lit/ug/spru198k/spru198k.pdf"
+}
+
+@BOOK{ti_c62x_dsplib_pr,
+    TITLE = "TMS320C62x DSP Library Programmer's Reference (SPRU402B)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2003",
+    URL = "https://www.ti.com/lit/ug/spru402b/spru402b.pdf"
+}
+
+@BOOK{ti_c64x_dsplib_pr,
+    TITLE = "TMS320C64x DSP Library Programmer's Reference (SPRU565B)",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2003",
+    URL = "https://www.ti.com/lit/ug/spru565b/spru565b.pdf"
+}
+
+@MANUAL{ti_c6000_eabi,
+    TITLE = "C6000 Embedded Application Binary Interface",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2014",
+    URL = "https://www.ti.com/lit/an/sprab89a/sprab89a.pdf"
+}
+
+% 4. Optimization
+@MANUAL{ti_c6000_ht,
+    TITLE = "Hand-Tuning Loops and Control Code on the TMS320C6000",
+    AUTHOR = "Elana Granston",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2006",
+    URL = "https://www.ti.com/lit/an/spra666/spra666.pdf"
+}
+
+@MANUAL{ti_c6000_opt_intro,
+    TITLE = "Introduction to TMS320C6000 DSP Optimization",
+    AUTHOR = "Paul Yin",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2011",
+    URL = "https://www.ti.com/lit/an/sprabf2/sprabf2.pdf"
+}
+
+@MANUAL{ti_c6000_opt_vision,
+    TITLE = "A Tutorial on Optimizing Vision Algorithms on TI DSPs",
+    AUTHOR = "Senthil Kumar Yogamani",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2012",
+    URL = "https://www.ti.com/lit/an/spna165/spna165.pdf"
+}
+
+@MANUAL{ti_c66x_loop,
+    TITLE = "Optimizing Loops on the C66x DSP",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2010",
+    URL = "https://www.ti.com/lit/an/sprabg7/sprabg7.pdf"
+}
+
+@MANUAL{ti_c6000_cb,
+    TITLE = "Circular Buffering on TMS320C6000",
+    AUTHOR = "Dipa Rao",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2001",
+    URL = "https://www.ti.com/lit/an/spra645a/spra645a.pdf"
+}
+
+@MANUAL{ti_c6000_cb2,
+    TITLE = "TMS320C6000 Non-Power of 2 Circular Buffers",
+    AUTHOR = "Eric Wilbur and Yao-Ting Cheng",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2000",
+    URL = "https://www.ti.com/lit/an/spra645a/spra645a.pdf"
+}
+
+% 5. Codecs
+@MISC{ti_dm648_codecs,
+    TITLE = "{DM648CODECS} - Codecs for {DM648} and {DM647} Devices",
+    AUTHOR = "{Texas Instruments}",
+    PUBLISHER = "Texas Instruments",
+    NOTE = "Version 1.00.001",
+    YEAR = "2010",
+    URL = "https://www.ti.com/tool/DM648CODECS"
+}
+
+@MISC{ti_c64xp_codecs,
+    TITLE = "{C64XPLUSCODECS} - {C64x+} Software Codecs (Speech and Video)",
+    AUTHOR = "{Texas Instruments}",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2011",
+    URL = "https://www.ti.com/tool/C64XPLUSCODECS"
+}
+
+@MISC{ti_c66x_codecs,
+    TITLE = "CODECS - Video, Speech for C66x Devices",
+    AUTHOR = "Texas Instruments",
+    PUBLISHER = "Texas Instruments",
+    YEAR = "2015",
+    URL = "https://www.ti.com/tool/C66XCODECS"
+}
+
+%
+% F. x86 references
+%    1. ISA Manuals
+%    2. ABI
+%
+
+% 1. ISA Manuals
+@BOOK{amd64,
+    TITLE = "AMD64 Architecture Programmer Manual (Volumes 1-5)",
+    AUTHOR = "Advanced Micro Devices",
+    PUBLISHER = "Advanced Micro Devices",
+    YEAR = "2023",
+    URL = "https://www.amd.com/system/files/TechDocs/40332.pdf"
+}
+
+@BOOK{intel_sdm_vol1,
+    TITLE = "Intel 64 and IA-32 Architectures Software Developer's Manual. Volume 1 - Basic Architecture",
+    AUTHOR = "Intel Corporation",
+    PUBLISHER = "Intel Corporation",
+    YEAR = "2023",
+    URL = "https://cdrdv2.intel.com/v1/dl/getContent/671436"
+}
+
+@BOOK{intel_sdm_vol2,
+    TITLE = "Intel 64 and IA-32 Architectures Software Developer's Manual. Volume 2 - Instruction Set Reference",
+    AUTHOR = "Intel Corporation",
+    PUBLISHER = "Intel Corporation",
+    YEAR = "2023",
+    URL = "https://cdrdv2.intel.com/v1/dl/getContent/671110"
+}
+
+@BOOK{intel_sdm_vol3,
+    TITLE = "Intel 64 and IA-32 Architectures Software Developer's Manual. Volume 3 - System Programming Guide",
+    AUTHOR = "Intel Corporation",
+    PUBLISHER = "Intel Corporation",
+    YEAR = "2023",
+    URL = "https://cdrdv2.intel.com/v1/dl/getContent/671447"
+}
+
+@BOOK{intel_sdm_vol4,
+    TITLE = "Intel 64 and IA-32 Architectures Software Developer's Manual. Volume 4 - Model Specific Registers",
+    AUTHOR = "Intel Corporation",
+    PUBLISHER = "Intel Corporation",
+    YEAR = "2023",
+    URL = "https://cdrdv2.intel.com/v1/dl/getContent/671098"
+}
+
+% 2. ABI
+@MANUAL{amd64_abi_spec,
+    TITLE = "System V Application Binary Interface - AMD64 Architecture Processor Supplement",
+    AUTHOR = "Michael Matz and Jan Hubicka and Andreas Jaeger and Mark Mitchell",
+    YEAR = "2012",
+    URL = "https://refspecs.linuxbase.org/elf/x86_64-abi-0.99.pdf"
+}
+
+%
+% G. GPU
+%    1. Instruction Set Reference
+%
+
+@BOOK{amd_gpu_rdna3,
+    TITLE = "RDNA3 Instruction Set Architecture - Reference Guide",
+    AUTHOR = "Advanced Micro Devices",
+    PUBLISHER = "Advanced Micro Devices",
+    YEAR = "2023",
+    URL = "https://www.amd.com/system/files/TechDocs/rdna3-shader-instruction-set-architecture-feb-2023_0.pdf"
+}
+
+@BOOK{amd_gpu_rdna2,
+    TITLE = "RDNA2 Instruction Set Architecture - Reference Guide",
+    AUTHOR = "Advanced Micro Devices",
+    PUBLISHER = "Advanced Micro Devices",
+    YEAR = "2020",
+    URL = "https://www.amd.com/system/files/TechDocs/rdna2-shader-instruction-set-architecture.pdf"
+}
+
+@BOOK{amd_gpu_rdna,
+    TITLE = "RDNA 1.0 Instruction Set Architecture - Reference Guide",
+    AUTHOR = "Advanced Micro Devices",
+    PUBLISHER = "Advanced Micro Devices",
+    YEAR = "2020",
+    URL = "https://www.amd.com/system/files/TechDocs/rdna-shader-instruction-set-architecture.pdf"
+}
+
+@BOOK{amd_gpu_cdna2,
+    TITLE = "AMD Instinct MI200 Instruction Set Architecture - Reference Guide",
+    AUTHOR = "Advanced Micro Devices",
+    PUBLISHER = "Advanced Micro Devices",
+    YEAR = "2022",
+    URL = "https://www.amd.com/system/files/TechDocs/instinct-mi200-cdna2-instruction-set-architecture.pdf"
+}
+
+@BOOK{amd_gpu_cdna,
+    TITLE = "AMD Instinct MI100 Instruction Set Architecture - Reference Guide",
+    AUTHOR = "Advanced Micro Devices",
+    PUBLISHER = "Advanced Micro Devices",
+    YEAR = "2020",
+    URL="https://www.amd.com/system/files/TechDocs/instinct-mi100-cdna1-shader-instruction-set-architecture.pdf"
+}
+
+@BOOK{amd_gcn3,
+    TITLE = "AMD Graphics Core Next Architecture, Generation 3",
+    AUTHOR = "Advanced Micro Devices",
+    PUBLISHER = "Advanced Micro Devices",
+    YEAR = "2016",
+    URL = "https://www.amd.com/system/files/TechDocs/gcn3-instruction-set-architecture.pdf"
+}
+
+@BOOK{amd_vega7nm,
+    TITLE = "AMD Vega 7nm Instruction Set Architecture - Reference Guide",
+    AUTHOR = "Advanced Micro Devices",
+    PUBLISHER = "Advanced Micro Devices",
+    YEAR = "2020",
+    URL = "https://www.amd.com/system/files/TechDocs/vega-7nm-shader-instruction-set-architecture.pdf"
+}
+
+%
+% H. Hexagon DSP
+%
+
+% 1. Programmer Reference Manuals
+@BOOK{hexagon_v5x,
+    TITLE = "Hexagon V5x Programmer's Reference Manual (80-N2040-8 Rev. H)",
+    AUTHOR = "Qualcomm Technologies Inc",
+    PUBLISHER = "Qualcomm Technologies Inc",
+    YEAR = "2016",
+    URL = "https://developer.qualcomm.com/qfile/29900/80-n2040-8_h_programmers_ref_v5.pdf"
+}
+
+@BOOK{hexagon_v73,
+    TITLE = "Qualcomm Hexagon V73 Progammer's Reference Manual (80-N2040-53 Rev. AA)",
+    AUTHOR = "Qualcomm Technologies Inc",
+    PUBLISHER = "Qualcomm Technologies Inc",
+    YEAR = "2022",
+    URL = "https://developer.qualcomm.com/qfile/70668/80-n2040-53_aa_prm_v73.pdf"
+}
+
+@BOOK{hexagon_v71,
+    TITLE = "Qualcomm Hexagon {V71} Programmer's Reference Manual (80-N2040-51 Rev. AB)",
+    AUTHOR = "{Qualcomm Technologies Inc}",
+    PUBLISHER = "Qualcomm Technologies Inc",
+    YEAR = "2022",
+    URL = "https://docs.qualcomm.com/bundle/publicresource/80-N2040-51_REV_AB_Hexagon_V71_ProgrammerS_Reference_Manual.pdf"
+}
+
+@BOOK{hexagon_v69,
+    TITLE = "Qualcomm Hexagon V69 Progammer's Reference Manual (80-N2040-50 Rev. AA)",
+    AUTHOR = "Qualcomm Technologies Inc",
+    PUBLISHER = "Qualcomm Technologies Inc",
+    YEAR = "2022",
+    URL = "https://developer.qualcomm.com/qfile/70667/80-n2040-50_aa_hexagon_v69_prm.pdf"
+}
+
+@BOOK{hexagon_v67,
+    TITLE = "Qualcomm Hexagon {V67} Programmer's Reference Manual (80-N2040-45 Rev. B)",
+    AUTHOR = "{Qualcomm Technologies Inc}",
+    PUBLISHER = "Qualcomm Technologies Inc",
+    YEAR = "2020",
+    URL = "https://docs.qualcomm.com/doc/80-N2040-45/80-N2040-45.pdf"
+}
+
+@BOOK{hexagon_v68,
+    TITLE = "Qualcomm Hexagon {V68} Programmer's Reference Manual (80-N2040-46 Rev. B)",
+    AUTHOR = "{Qualcomm Technologies Inc}",
+    PUBLISHER = "Qualcomm Technologies Inc",
+    YEAR = "2022",
+    URL = "https://docs.qualcomm.com/doc/80-N2040-46/80-N2040-46_REV_B_Hexagon_V68_Programmers_Reference_Manual.pdf"
+}
+
+@BOOK{hexagon_v68_hvx,
+    TITLE = "Qualcomm Hexagon {V68} {HVX} Programmer's Reference Manual (80-N2040-47 Rev. E)",
+    AUTHOR = "{Qualcomm Technologies Inc}",
+    PUBLISHER = "Qualcomm Technologies Inc",
+    YEAR = "2021",
+    URL = "https://developer.qualcomm.com/qfile/70663/80-n2040-47_e_hexagon_v68_hvx_prog_ref_manual.pdf"
+}
+
+@BOOK{hexagon_v66,
+    TITLE = "Qualcomm Hexagon V66 Progammer's Reference Manual (80-N2040-42 Rev. A)",
+    AUTHOR = "Qualcomm Technologies Inc",
+    PUBLISHER = "Qualcomm Technologies Inc",
+    YEAR = "2017",
+    URL = "https://developer.qualcomm.com/qfile/67415/80-n2040-42_a_qualcomm_hexagon_v66_programmer_reference_manual.pdf"
+}
+
+@BOOK{hexagon_v65,
+    TITLE = "Qualcomm Hexagon V65 Progammer's Reference Manual (80-N2040-39 Rev. A)",
+    AUTHOR = "Qualcomm Technologies Inc",
+    PUBLISHER = "Qualcomm Technologies Inc",
+    YEAR = "2016",
+    URL = "https://developer.qualcomm.com/qfile/67413/80-n2040-39_a_hexagon_v65_programmers_reference_manual.pdf"
+}
+
+@BOOK{hexagon_v62,
+    TITLE = "Qualcomm Hexagon {V62} Programmer's Reference Manual (80-N2040-36 Rev. C)",
+    AUTHOR = "{Qualcomm Technologies Inc}",
+    PUBLISHER = "Qualcomm Technologies Inc",
+    YEAR = "2016",
+    URL = "https://docs.qualcomm.com/doc/80-N2040-36/80-N2040-36_REV_C_Qualcomm_Hexagon_V62_Programmers_Reference_Manual_.pdf"
+}
+
+@BOOK{hexagon_v60_61,
+    TITLE = "Hexagon V60/V61 Progammer's Reference Manual (80-N2040-33 Rev. D)",
+    AUTHOR = "Qualcomm Technologies Inc",
+    PUBLISHER = "Qualcomm Technologies Inc",
+    YEAR = "2016",
+    URL = "https://developer.qualcomm.com/qfile/29904/80-n2040-33_d_programmers_ref_v6.pdf"
+}
+
+@BOOK{hexagon_v73_hvx,
+    TITLE = "Qualcomm Hexagon V73 HVX Progammer's Reference Manual (80-N2040-54 Rev. AA)",
+    AUTHOR = "Qualcomm Technologies Inc",
+    PUBLISHER = "Qualcomm Technologies Inc",
+    YEAR = "2022",
+    URL = "https://developer.qualcomm.com/qfile/70666/80-n2040-54_aa_v73_hvx_prm.pdf"
+}
+
+@BOOK{hexagon_v69_hvx,
+    TITLE = "Qualcomm Hexagon V69 HVX Progammer's Reference Manual (80-N2040-49 Rev. AA)",
+    AUTHOR = "Qualcomm Technologies Inc",
+    PUBLISHER = "Qualcomm Technologies Inc",
+    YEAR = "2022",
+    URL = "https://developer.qualcomm.com/qfile/70664/80-n2040-49_aa_v69_hvx_prm.pdf"
+}
+
+@BOOK{hexagon_v66_hvx,
+    TITLE = "Qualcomm Hexagon {V66} {HVX} Programmer's Reference Manual (80-N2040-44 Rev. B)",
+    AUTHOR = "{Qualcomm Technologies Inc}",
+    PUBLISHER = "Qualcomm Technologies Inc",
+    YEAR = "2018",
+    URL = "https://docs.qualcomm.com/bundle/publicresource/80-N2040-44_REV_B_Qualcomm_Hexagon_V66_HVX_Programmers_Reference_Manual_.pdf"
+}
+
+@BOOK{hexagon_v65_hvx,
+    TITLE = "Qualcomm Hexagon {V65} {HVX} Programmer's Reference Manual (80-N2040-41 Rev. B)",
+    AUTHOR = "{Qualcomm Technologies Inc}",
+    PUBLISHER = "Qualcomm Technologies Inc",
+    YEAR = "2018",
+    URL = "https://docs.qualcomm.com/bundle/publicresource/80-N2040-41_REV_B_Qualcomm_Hexagon_V65_HVX_Programmers_Reference_Manual.pdf"
+}
+
+@BOOK{hexagon_v60_hvx,
+    TITLE = "Hexagon V60 HVX Progammer's Reference Manual (80-N2040-30 Rev. B)",
+    AUTHOR = "Qualcomm Technologies Inc",
+    PUBLISHER = "Qualcomm Technologies Inc",
+    YEAR = "2016",
+    URL = "https://developer.qualcomm.com/qfile/29902/80-n2040-30_b_programmers_ref_v60_hvx.pdf"
+}
+
+@BOOK{hexagon_v5,
+    TITLE = "Hexagon V5x Progammer's Reference Manual (80-N2040-8 Rev. H)",
+    AUTHOR = "Qualcomm Technologies Inc",
+    PUBLISHER = "Qualcomm Technologies Inc",
+    YEAR = "2016",
+    URL = "https://developer.qualcomm.com/qfile/29900/80-n2040-8_h_programmers_ref_v5.pdf"
+}
+
+%
+% I. Misc
+%
+
+@MISC{lex_ffmpeg,
+    TITLE  = "{FFmpeg}: The Incredible Technology Behind Video on the Internet, {Lex Fridman Podcast} \#496",
+    AUTHOR = "Lex Fridman and Jean-Baptiste Kempf and Kieran Kunhya",
+    YEAR   = "2026",
+    URL    = "https://lexfridman.com/ffmpeg-transcript\#assembly-code-handwritten",
+    NOTE   = "Transcript, section ``Assembly code (handwritten)''. Video: https://www.youtube.com/watch?v=nepKKz-MzFM\&t=7268s. Accessed Oct-2026"
+}

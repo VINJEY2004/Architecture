@@ -44,9 +44,17 @@ anchorcolor = blue]{hyperref}
 \usepackage{booktabs}
 \usepackage{eso-pic}
 \usepackage{pdfpages}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
 
 %\pgfplotsset{compat=1.15}
 \newcommand{\degre}{\ensuremath{^\circ}}
+
+\makeatletter
+\def\lst@visiblespace{\pdffakespace\phantom{a}}
+\makeatother
+
+\setlength{\emergencystretch}{1.5em}
 
 %
 % \mathset{set-name}
@@ -893,7 +901,7 @@ is not described here.
     \setlength{\leftmargin}{0pt}
     \setlength{\parindent}{0em}
     \setlength{\leftskip}{0em}
-    \par
+    \par\phantomsection
     \textrm{%
     \textbf{%
     #1%

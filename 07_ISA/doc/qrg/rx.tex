@@ -1,5 +1,5 @@
 \SOPNoteLabel{CArch.Summary.ISA.RX.Note.1}
-\SOPNoteHead{1. Abstract}
+\SOPNoteHeadToc{1. Abstract}
 \SOPNoteBody
 
 Algorithm analysis and comparison are usually done on the basis of three parameters -- Time Complexity, 
@@ -7,7 +7,7 @@ Space Complexity and Numerical Accuracy. Time complexity counts abstract operati
 add/sub operations), which hides the cost of the machine on which the algorithm runs. Knuth uses machine 
 language of MIX and MMIX to show the implementation of algorithms in machines (\cite{knuth_mmix}). Performance 
 engineering gains beyond Moore's law come from software tuned to the underlying architecture (\cite{charles_pe_paper}). 
-We think performance libraries (\cite{rx_dsplib_um, cmsis_dsplib, esp_dsp_lib}) cannot achieve their 
+We think performance libraries (\cite{rx_dsplib, cmsis_dsplib, esp_dsp_lib}) cannot achieve their 
 best performance without understanding of the underlying ISA and microarchitecture, so algorithm analysis 
 should be done on real processors for applications where every cycle counts (\cite{lex_ffmpeg}). For Renesas 
 RX, ISA information required for such analysis is spread across nearly 1000 pages of ISA manuals 
@@ -337,13 +337,14 @@ from v2), DPU and Register Bank instructions in v3.}
 \end{subfigure}
 
 \captionsetup{font=scriptsize, labelfont=scriptsize}
-\caption{RX Register Set and Opcodes at glance for v1, v2 and v3}
+\caption{RX Register Set and Opcodes at glance for v1, v2 and v3. \protect\tabref{CArch.Summary.ISA.RX.Groups}
+provides details on availability of optional components in RX processor groups.}
 \figlabel{CArch.Summary.ISA.RX.RFile.ISet.OpcodeSummary}
 \end{figure}
 
 
 \SOPNoteLabel{CArch.Summary.ISA.RX.Note.2}
-\SOPNoteHead{2. Register Set}
+\SOPNoteHeadToc{2. Register Set}
 \SOPNoteBody
 
 (1) \emph{Data Registers:} %
@@ -419,7 +420,7 @@ access LI.
 
 
 \SOPNoteLabel{CArch.Summary.ISA.RX.Note.3}
-\SOPNoteHead{3. RX CPU Overview}
+\SOPNoteHeadToc{3. RX CPU Overview}
 \SOPNoteBody
 
 (1) \emph{Address Space and Data Size Terms:} %
@@ -615,11 +616,13 @@ RMPA instruction also uses R6:R5:R4, which hold the sum. These instructions are 
 and the number of cycles these instructions take for execution depends on number of iterations 
 and size of data type.
 
-
+(9) \emph{Processor Groups:} %
+\tabref{CArch.Summary.ISA.RX.Groups} lists active RX processor groups with ISA version, floating point support, 
+register bank, clock, memory and price range, to help identify the groups on which software can be targeted.
 
 
 \SOPNoteLabel{CArch.Summary.ISA.RX.Note.4}
-\SOPNoteHead{4. Notations}
+\SOPNoteHeadToc{4. Notations}
 \SOPNoteBody
 
 \levelone
@@ -761,7 +764,7 @@ are signed and pcdsp3 encodes offsets 3 to 10, as listed in \tabref{CArch.Summar
 
 
 \SOPNoteLabel{CArch.Summary.ISA.RX.Note.5}
-\SOPNoteHead{5. Addressing Modes}
+\SOPNoteHeadToc{5. Addressing Modes}
 \SOPNoteBody
 
 Addressing modes specify how operand is obtained. Addressing modes available in RX are
@@ -823,7 +826,7 @@ pcdsp fields are given in \SOPNoteRef{CArch.Summary.ISA.RX.Note.4}{Section 4(6)}
 
 
 \SOPNoteLabel{CArch.Summary.ISA.RX.Note.6}
-\SOPNoteHead{6. Instruction Set Reference}
+\SOPNoteHeadToc{6. Instruction Set Reference}
 \SOPNoteBody
 
 (1) \emph{Nature and Type:} %
@@ -971,7 +974,7 @@ The Operation column in instruction reference tables uses the following conventi
 
 
 \SOPNoteLabel{CArch.Summary.ISA.RX.Note.7}
-\SOPNoteHead{7. Instruction Encoding}
+\SOPNoteHeadToc{7. Instruction Encoding}
 \SOPNoteBody
 
 (1) \emph{Encoding diagrams and tables:} %
@@ -1145,45 +1148,14 @@ $I_0'$.
 
 
 \SOPNoteLabel{CArch.Summary.ISA.RX.Note.8}
-\SOPNoteHead{8. Cycles Count}
+\SOPNoteHeadToc{8. Cycles Count}
 \SOPNoteBody
 
 (1) \emph{Sources:} %
 Information presented in this section is based on the pipeline and number of cycles sections in the CPU chapter 
-of Group User Manuals for
-
-    \leveltwo
-    (a) v1: From RX100 Series: RX110 (\cite{rx_110}), RX111 (\cite{rx_111}), RX113 (\cite{rx_113}), 
-    RX130 (\cite{rx_130}) and RX13T (\cite{rx_13T}).
-
-    \leveltwo
-    (b) v2: From 
-    
-        \levelthree
-        (i) RX100 Series: RX140 (\cite{rx_140}) and RX14T (\cite{rx_14T}).
-        
-        (ii) RX200 Series: RX230 and RX231 (\cite{rx_230}), RX23E-A (\cite{rx_23ea}), RX23E-B (\cite{rx_23eb}), 
-        RX23T (\cite{rx_23t}), RX23W (\cite{rx_23w}), RX24T (\cite{rx_24t}) and RX24U (\cite{rx_24u}).
-    
-        (iii) RX600 Series: RX65N and RX651 (\cite{rx_65n}).
-        
-        (iv) RX700 Series: RX71M (\cite{rx_71m}).
-
-    \leveltwo
-    (c) v3: From
-    
-        \levelthree
-        (i) RX200 Series: RX260 and RX261 (\cite{rx_260}) and RX26T (\cite{rx_26t}).
-        
-        (ii) RX600 Series: RX660 (\cite{rx_660}), RX66N (\cite{rx_66n}), RX66T (\cite{rx_66t}) and 
-        RX671 (\cite{rx_671}).
-
-        (iii) RX700 Series: RX72M (\cite{rx_72m}), RX72N (\cite{rx_72n}) and RX72T (\cite{rx_72t}).
-
-\levelone
-These were the groups that were marked as active as of Oct-2026 on Renesas website. 
-\tabref{CArch.Summary.ISA.RX.Cycles} provides instruction cycles with zero-wait access.
-Cycles are the same in v1, v2 and v3, except for FADD, FSUB and FMUL instructions.
+of group user manuals listed in the Ref. column of \tabref{CArch.Summary.ISA.RX.Groups}. These were the groups 
+marked as active as of Oct-2026 on Renesas website. \tabref{CArch.Summary.ISA.RX.Cycles} provides instruction 
+cycles with zero-wait access. Cycles are the same in v1, v2 and v3, except for FADD, FSUB and FMUL instructions.
 
 (2) \emph{Throughput and Latency:} %
 Throughput is the number of cycles after which the next instruction can start. Latency is the 
@@ -1246,7 +1218,7 @@ are outside the scope of this document.
 
 
 \SOPNoteLabel{CArch.Summary.ISA.RX.Note.9}
-\SOPNoteHead{9. Intrinsics and Inline assembly}
+\SOPNoteHeadToc{9. Intrinsics and Inline assembly}
 \SOPNoteBody
 
 (1) \emph{Intrinsics:} %
@@ -1258,7 +1230,9 @@ mapping in C language. This lets programmer hint to compiler on instruction to b
     (a) \emph{machine.h:} %
     CC-RX provides two versions of intrinsics. \tabref{CArch.Summary.ISA.RX.Intrinsics} shows version
     with \_\_ prefix, which is available from V2.05.00. The second version, without the prefix, is 
-    available in all versions and requires machine.h to be included.
+    available in all versions, except for Bit Manipulation (\_\_bset, \_\_bclr and \_\_bnot) and 
+    DPU (\_\_set\_dpsw, \_\_get\_dpsw, \_\_set\_decnt, \_\_get\_decnt and \_\_get\_depc), and 
+    requires machine.h.
 
     (b) \emph{Trigonometric function unit:} %
     Certain RX processors have trigonometric function unit. CC-RX provides intrinsics to access them.
@@ -1283,7 +1257,7 @@ Some points to note are:
 
 
 \SOPNoteLabel{CArch.Summary.ISA.RX.Note.10}
-\SOPNoteHead{10. Calling Conventions}
+\SOPNoteHeadToc{10. Calling Conventions}
 \SOPNoteBody
 
 (1) \emph{Scope limit:} %
@@ -1295,7 +1269,7 @@ conventions without these restrictions, refer to CC-RX manual (\cite{rx_compiler
     Only fundamental data types (1, 2, 4 and 8-byte signed/unsigned integers, single/double precision
     floating point and pointer) are passed as argument and provided as return value.
 
-    (b) \emph{No vaarg:} %
+    (b) \emph{No variable arguments:} %
     Functions called have fixed number of parameters.
 
     (c) \emph{Double Size:} %
@@ -1403,7 +1377,7 @@ For long long and double data types of length 8 bytes, R2:R1 holds the return va
 
 
 \SOPNoteLabel{CArch.Summary.ISA.RX.Note.11}
-\SOPNoteHead{11. Floating Point}
+\SOPNoteHeadToc{11. Floating Point}
 \SOPNoteBody
 
 (1) \emph{FPSW and DPSW:} %
@@ -1500,7 +1474,7 @@ Signaling NaN (SNaN) and Quiet NaN (QNaN) are represented with MSB of the fracti
 
 
 \SOPNoteLabel{CArch.Summary.ISA.RX.Note.12}
-\SOPNoteHead{12. Pseudo Instructions}
+\SOPNoteHeadToc{12. Pseudo Instructions}
 \SOPNoteBody
 
 \tabref{CArch.Summary.ISA.RX.PseudoInstructions} provides the list of pseudo instructions available in RX and the
@@ -1534,7 +1508,7 @@ BMNC \#bp5, Rd        & BMLTU \#bp5, Rd        & BMNC \#bp3, dsp[Rd].B       & B
 
 
 \SOPNoteLabel{CArch.Summary.ISA.RX.Note.13}
-\SOPNoteHead{13. Exceptions}
+\SOPNoteHeadToc{13. Exceptions}
 \SOPNoteBody
 
 Exception is an event that requires stopping the regular flow of execution and starting another. 
@@ -1613,7 +1587,7 @@ first occurrence until the handler releases it when DECNT.EHM = 1.
 
 
 \SOPNoteLabel{CArch.Summary.ISA.RX.Note.14}
-\SOPNoteHead{14. Deviations from manuals}
+\SOPNoteHeadToc{14. Deviations from manuals}
 \SOPNoteBody
 
 Instruction reference, encoding and cycles tables were cross-checked against the ISA manuals 
@@ -1645,7 +1619,7 @@ operand.
 
 
 \SOPNoteLabel{CArch.Summary.ISA.RX.Note.15}
-\SOPNoteHead{15. Future and Related Work}
+\SOPNoteHeadToc{15. Future and Related Work}
 \SOPNoteBody
 
 (1) \emph{Complementary Materials:} %
@@ -1750,7 +1724,7 @@ Explorable explanations can be created for
 
 
 \SOPNoteLabel{CArch.Summary.ISA.RX.Note.16}
-\SOPNoteHead{16. Acknowledgements}
+\SOPNoteHeadToc{16. Acknowledgements}
 \SOPNoteBody
 
 We are grateful to Suresh Krishnan (porting and optimization of codecs), Akhash Kumar (characterization and 
@@ -1807,9 +1781,9 @@ Arithmetic         & AB.IR1            & $<$opc$>$ \#uimm4, Rd                 &
                    &                   &                                       & MAX               & \flags{----}      & Rd = Rd $>$ Rs ? Rd : Rs;                                                     \\
                    &                   &                                       & MIN               & \flags{----}      & Rd = Rd $<$ Rs ? Rd : Rs;                                                     \\
                    &                   &                                       &                   &                   &                                                                               \\
-                   & AB.REG2           & $<$opc$>$ Rs, Rs2, Rd                 & ADD               & \flags{****}      & Rd = Rs + Rs2;                                                                \\
-                   &                   &                                       & SUB               & \flags{****}      & Rd = Rs - Rs2;                                                                \\
-                   &                   &                                       & MUL               & \flags{----}      & Rd = Rs * Rs2;                                                                \\
+                   & AB.REG2           & $<$opc$>$ Rs, Rs2, Rd                 & ADD               & \flags{****}      & Rd = Rs2 + Rs;                                                                \\
+                   &                   &                                       & SUB               & \flags{****}      & Rd = Rs2 - Rs;                                                                \\
+                   &                   &                                       & MUL               & \flags{----}      & Rd = Rs2 * Rs;                                                                \\
                    &                   &                                       &                   &                   &                                                                               \\
                    & AB.LD1, AB.MI1,   & $<$opc$>$ dsp[Rs].me, Rd              & ADD               & \flags{****}      & Rd = Rd + Mem(Rs + dsp, me);                                                  \\
                    & AB.LD2, AB.MI2    &                                       & SUB               & \flags{****}      & Rd = Rd - Mem(Rs + dsp, me);                                                  \\
@@ -1828,7 +1802,7 @@ Arithmetic         & AB.IR1            & $<$opc$>$ \#uimm4, Rd                 &
                    &                   &                                       & SBB               & \flags{****}      & Rd = Rd - Mem(Rs + dsp, L) - $\sim$C;                                         \\
                    &                   &                                       &                   &                   &                                                                               \\
                    & ZERO.OP1          & $<$opc$>$                             & SATR              & \flags{----}      & if(O == 1)                                                                    \\
-                   &                   &                                       &                   &                   & \quad R6:R5:R4 = (S == 1) ? $2^{63}$ - 1 : -$2^{63}$;                         \\
+                   &                   &                                       &                   &                   & \quad R6:R5:R4 = (S == 0) ? $2^{63}$ - 1 : -$2^{63}$;                         \\
                    &                   &                                       &                   &                   &                                                                               \\
 Compare            & AB.IR1C           & $<$opc$>$ \#uimm4, Rs2                & CMP               & \flags{****}      & Rs2 - uimm4;                                                                  \\
                    &                   &                                       &                   &                   &                                                                               \\
@@ -1845,7 +1819,8 @@ Compare            & AB.IR1C           & $<$opc$>$ \#uimm4, Rs2                &
 \end{tabular}
 \end{center}
 \captionsetup{font=scriptsize, labelfont=scriptsize}
-\caption{Integer ALU Arithmetic and Comparison Instructions. Comparison instructions update only the flags.}
+\caption{Integer ALU Arithmetic and Comparison Instructions. Comparison instructions update only the flags.
+In EMUL and EMULU, Rd is R0 -- R14, as Rd+1:Rd is the destination.}
 \tablabel{CArch.Summary.ISA.RX.IRef.IALU.Arithmetic}
 \end{table}
 
@@ -2055,8 +2030,8 @@ Conditional        & CTL.IMM.S         & $<$opc$>$ pcdsp3                      &
                    &                   &                                       &                   &                                                                               \\
                    & CTL.IMM.B         & $<$opc$>$ pcdsp8                      & B$<$Cond$>$.B     & PC = (Cond Pass) ? PC + pcdsp8 : PC + 2;                                      \\
                    &                   &                                       &                   &                                                                               \\
-                   & CTL.IMM.W         & $<$opc$>$ pcdsp16                     & BEQ.W             & PC = (Z == 1) ? PC + pcdsp16 : PC + 2;                                        \\
-                   &                   &                                       & BNE.W             & PC = (Z == 0) ? PC + pcdsp16 : PC + 2;                                        \\
+                   & CTL.IMM.W         & $<$opc$>$ pcdsp16                     & BEQ.W             & PC = (Z == 1) ? PC + pcdsp16 : PC + 3;                                        \\
+                   &                   &                                       & BNE.W             & PC = (Z == 0) ? PC + pcdsp16 : PC + 3;                                        \\
                    &                   &                                       &                   &                                                                               \\
 Unconditional      & CTL.IMM.S         & $<$opc$>$ pcdsp3                      & BRA.S             & PC = PC + pcdsp3;                                                             \\
 (Relative)         & CTL.IMM.B         & $<$opc$>$ pcdsp8                      & BRA.B             & PC = PC + pcdsp8;                                                             \\
@@ -2259,7 +2234,7 @@ memcmp             & ARY.B             & $<$opc$>$                             &
 \captionsetup{font=scriptsize, labelfont=scriptsize}
 \caption{Array Instructions. T is the data type given by opcode suffix (.sz) -- B, W or L, with UB and UW
 in place of B and W for SUNTIL and SWHILE. R3 = 0 does nothing. R1 and R2 are undefined after RMPA, SMOVU
-and SCMPU.}
+and SCMPU. Maximum possible value for R3 for RMPA instruction is $2^{16}$.}
 \tablabel{CArch.Summary.ISA.RX.IRef.Array}
 \end{subtable}
 \captionsetup{font=scriptsize, labelfont=scriptsize}
@@ -2490,6 +2465,7 @@ DPU Instructions don't update PSW flags (\flags{----}), except MVFDR, which upda
 
 %
 % RX CPU instruction cycle timing
+%
 
 \clearpage
 \begin{table}
@@ -2565,6 +2541,7 @@ DPU Mov$^3$        & Reg to Reg         & DMOV, MVFDC, MVTDC, MVFDR             
 \multicolumn{5}{l}{b. Number of cycles taken depends on value of dividend and divisor.}                                                          \\
 \multicolumn{5}{l}{c. x:y correspond to throughput and latency of x and y cycles.}                                                               \\
 \multicolumn{5}{l}{d. One more cycle when a following DPU Mov or Sign Inject instruction reads the result (RAW hazard).}                         \\
+\multicolumn{5}{l}{Cycles of System instructions -- WAIT, BRK and INT are not listed (they are not used for algorithm analysis).}
 \end{tabular}
 \end{center}
 \captionsetup{font=scriptsize, labelfont=scriptsize}
@@ -2601,6 +2578,66 @@ Instructions in ARY.B group have no sz in their opcode and process elements at b
 \end{table}
 
 %
+% Group Summary
+%
+
+\clearpage
+\begin{table}
+\begin{center}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lllllrrrrrl}
+\hline
+Series & Group          & ISA    & Floating Point & Reg. Bank   & Price (USD)      & MHz      & Flash       & Data Flash   & RAM      & Ref.             \\ \hline
+RX100  & RX110          & RXv1   & No             & -           & \$0.80--1.29     & 32       & 8--128      & 0            & 8--16    & \cite{rx_110}    \\
+       & RX111          & RXv1   & No             & -           & \$1.02--2.64     & 32       & 16--512     & 8            & 8--64    & \cite{rx_111}    \\
+       & RX113          & RXv1   & No             & -           & \$1.81--3.35     & 32       & 128--512    & 8            & 32--64   & \cite{rx_113}    \\
+       & RX130          & RXv1   & No             & -           & \$1.40--2.99     & 32       & 64--512     & 8            & 10--48   & \cite{rx_130}    \\
+       & RX13T          & RXv1   & Single         & -           & \$1.15--1.53     & 32       & 64--128     & 4            & 12       & \cite{rx_13T}    \\
+       & RX140          & RXv2   & Single         & -           & \$1.00--2.32     & 48       & 64--256     & 4--8         & 16--64   & \cite{rx_140}    \\
+       & RX14T$^{a}$    & RXv2   & Single         & -           & \$0.93--1.21     & 48       & 128         & 4            & 12       & \cite{rx_14T}    \\
+       &                &        &                &             &                  &          &             &              &          &                  \\
+RX200  & RX230          & RXv2   & Single         & -           & \$1.92--3.21     & 54       & 128--256    & 8            & 32       & \cite{rx_230}    \\
+       & RX231          & RXv2   & Single         & -           & \$2.03--4.25     & 54       & 128--512    & 8            & 32--64   & \cite{rx_230}    \\
+       & RX23E-A        & RXv2   & Single         & -           & \$4.63--7.61     & 32       & 128--256    & 8            & 16--32   & \cite{rx_23ea}   \\
+       & RX23E-B        & RXv2   & Single         & -           & \$5.79--9.80     & 32       & 128--256    & 8            & 16--32   & \cite{rx_23eb}   \\
+       & RX23T          & RXv2   & Single         & -           & \$1.45--1.84     & 40       & 64--128     & 0            & 12       & \cite{rx_23t}    \\
+       & RX24T          & RXv2   & Single         & -           & \$1.97--3.64     & 80       & 128--512    & 8            & 16--32   & \cite{rx_24t}    \\
+       & RX24U          & RXv2   & Single         & -           & \$3.23--4.02     & 80       & 256--512    & 8            & 32       & \cite{rx_24u}    \\
+       & RX260          & RXv3   & Single         & No          & \$2.09--2.99     & 64       & 256--512    & 8            & 128      & \cite{rx_260}    \\
+       & RX261          & RXv3   & Single         & No          & \$2.36--3.60     & 64       & 256--512    & 8            & 128      & \cite{rx_260}    \\
+       & RX26T$^{a}$    & RXv3   & Single         & 16$^{d}$    & \$1.98--4.58     & 120      & 128--512    & 16           & 48--64   & \cite{rx_26t}    \\
+       &                &        &                &             &                  &          &             &              &          &                  \\
+RX600  & RX64M          & RXv2   & Single         & -           & \$8.55--11.81    & 120      & 2048--4096  & 64           & 512      & \cite{rx_64M}    \\
+       & RX651          & RXv2   & Single         & -           & \$4.15--8.38     & 120      & 512--2048   & 0--32        & 256--640 & \cite{rx_65n}    \\
+       & RX65N          & RXv2   & Single         & -           & \$4.75--9.09     & 120      & 512--2048   & 0--32        & 256--640 & \cite{rx_65n}    \\
+       & RX65W-A$^{b}$  & RXv2   & Single         & -           & \$12.66--15.58   & 120      & 2048        & 32           & 640      & \cite{rx_65wa}   \\
+       & RX660          & RXv3   & Single         & 16          & \$2.89--4.93     & 120      & 512--1024   & 32           & 128      & \cite{rx_660}    \\
+       & RX66N          & RXv3   & Double/Single  & 16          & \$7.38--11.36    & 120      & 2048--4096  & 32           & 1024     & \cite{rx_66n}    \\
+       & RX66T          & RXv3   & Single         & No          & \$2.93--6.58     & 160      & 256--1024   & 32           & 64--128  & \cite{rx_66t}    \\
+       & RX671          & RXv3   & Double/Single  & 16          & \$3.52--6.28     & 120      & 1024--2048  & 8            & 384      & \cite{rx_671}    \\
+       &                &        &                &             &                  &          &             &              &          &                  \\
+RX700  & RX71M          & RXv2   & Single         & -           & \$9.45--13.92    & 240      & 2048--4096  & 64           & 512      & \cite{rx_71m}    \\
+       & RX72M$^{a}$    & RXv3   & Double/Single  & 16          & \$9.09--13.95    & 240      & 2048--4096  & 32           & 1024     & \cite{rx_72m}    \\
+       & RX72N$^{a}$    & RXv3   & Double/Single  & 16          & \$8.61--12.69    & 240      & 2048--4096  & 32           & 1024     & \cite{rx_72n}    \\
+       & RX72T$^{a}$    & RXv3   & Single         & 16          & \$4.71--7.32     & 200      & 512--1024   & 32           & 128      & \cite{rx_72t}    \\
+       & RX74M$^{ac}$   & RXv3e  & Double/Single  & 16          & -                & 300--600 & 512--1024   & 48           & 1536     & \cite{rx_74m}    \\
+       & RX74N$^{ac}$   & RXv3e  & Double/Single  & 16          & -                & 300--600 & 512--1024   & 48           & 1536     & \cite{rx_74n}    \\ \hline
+       &                &        &                &             &                  &          &             &              &          &                  \\
+\multicolumn{11}{l}{$^{a}$Has Trigonometric Function Unit (TFU).}                                                                                        \\
+\multicolumn{11}{l}{$^{b}$Cycles not provided in group manual.}                                                                                          \\
+\multicolumn{11}{l}{$^{c}$RXv3e $\supset$ RXv3. Additions in relation to v3e are not covered in this document.}                                          \\
+\multicolumn{11}{l}{$^{d}$Register bank save is supported only in products with 64 KB RAM.}                                                              \\
+\end{tabular}
+\end{center}
+\captionsetup{font=scriptsize, labelfont=scriptsize}
+\caption{Active RX processor groups. Memory (Flash, Data Flash and RAM) sizes are in KB. Price is budgetary 
+1k-unit price, and Price, MHz, Flash, Data Flash and RAM are lowest to highest across products of a group, 
+as listed in Renesas product selector on 21-Oct-2026.} 
+\tablabel{CArch.Summary.ISA.RX.Groups}
+\end{table}
+
+%
 % Intrinsics
 %
 
@@ -2611,56 +2648,55 @@ Instructions in ARY.B group have no sz in their opcode and process elements at b
 \setlength{\tabcolsep}{4pt}
 \begin{tabular}{llll}
 \hline
-Nature            & Type                 & Function                                                                     & Instruction              \\ \hline
-IALU              & Arithmetic           & int32\_t \_\_max(int32\_t x, int32\_t y)                                     & MAX                      \\
-                  &                      & int32\_t \_\_min(int32\_t x, int32\_t y)                                     & MIN                      \\
-                  &                      & int64\_t \_\_emul(int32\_t x, int32\_t y)                                    & EMUL                     \\
-                  &                      & int64\_t \_\_emulu(int32\_t x, int32\_t y)                                   & EMULU                    \\
-                  &                      &                                                                              &                          \\
-                  & Shift                & uint32\_t \_\_rolc(uint32\_t x)                                              & ROLC                     \\
-                  &                      & uint32\_t \_\_rorc(uint32\_t x)                                              & RORC                     \\
-                  &                      & uint32\_t \_\_rotl(uint32\_t x, uint32\_t y)                                 & ROTL                     \\
-                  &                      & uint32\_t \_\_rotr(uint32\_t x, uint32\_t y)                                 & ROTR                     \\
-                  &                      & uint32\_t \_\_revl(uint32\_t x)                                              & REVL                     \\
-                  &                      & uint32\_t \_\_revw(uint32\_t x)                                              & REVW                     \\
-                  &                      &                                                                              &                          \\
-Bit Manipulation  & Set/Clear/Toggle     & void \_\_bset(uint8\_t *x, uint32\_t bp3)                                    & BSET                     \\
-                  &                      & void \_\_bclr(uint8\_t *x, uint32\_t bp3)                                    & BCLR                     \\
-                  &                      & void \_\_bnot(uint8\_t *x, uint32\_t bp3)                                    & BNOT                     \\
-                  &                      &                                                                              &                          \\
-Data Movement     & Exchange             & void \_\_xchg(int32\_t *x, int32\_t *y)                                      & XCHG$^a$                 \\
-                  &                      &                                                                              &                          \\
-Array             & MAC                  & int64\_t \_\_rmpab(int64\_t init, uint32\_t cnt, int8\_t *x, int8\_t *y)     & RMPA.B                   \\
-                  &                      & int64\_t \_\_rmpaw(int64\_t init, uint32\_t cnt, int16\_t *x, int16\_t *y)   & RMPA.W                   \\
-                  &                      & int64\_t \_\_rmpal(int64\_t init, uint32\_t cnt, int32\_t *x, int32\_t *y)   & RMPA.L                   \\
-                  &                      &                                                                              &                          \\
-DSP               & Move Acc             & void \_\_set\_acc(int64\_t a)                                                & MVTACLO, MVTACHI         \\
-                  &                      & int64\_t \_\_get\_acc()                                                      & MVFACHI, MVFACMI         \\
-                  &                      &                                                                              &                          \\
-                  & 16-Bit Mul/MAC       & int32\_t \_\_macl(int16\_t *x, int16\_t *y, uint32\_t cnt)                   & MVFACMI$^b$              \\
-                  &                      & int16\_t \_\_macw1(int16\_t *x, int16\_t *y, uint32\_t cnt)                  & RACW \#1, MVFACHI$^c$    \\
-                  &                      & int16\_t \_\_macw2(int16\_t *x, int16\_t *y, uint32\_t cnt)                  & RACW \#2, MVFACHI$^c$    \\
-                  &                      &                                                                              &                          \\
-System            & Control Register     & void \_\_set\_$<$xxx$>$(uint32\_t cr)                                        & MVTC                     \\
-                  &                      & uint32\_t \_\_get\_$<$xxx$>$()                                               & MVFC                     \\
-                  &                      & void \_\_set\_$<$yyy$>$(void *cr)                                            & MVTC                     \\
-                  &                      & void * \_\_get\_$<$yyy$>$()                                                  & MVFC                     \\
-                  &                      & void \_\_set\_$<$zzz$>$(uint32\_t cr)                                        & MVTDC                    \\
-                  &                      & uint32\_t \_\_get\_$<$zzz$>$()                                               & MVFDC                    \\
-                  &                      & void * \_\_get\_depc()                                                       & MVFDC                    \\
-                  &                      & uint8\_t \_\_get\_ipl()                                                      & MVFC                     \\
-                  &                      & void \_\_set\_ipl(int32\_t ipl)                                              & MVTIPL$^d$               \\
-                  &                      &                                                                              &                          \\
-                  & Write Flag           & void \_\_setpsw\_i()                                                         & SETPSW                   \\
-                  &                      & void \_\_clrpsw\_i()                                                         & CLRPSW                   \\
-                  &                      &                                                                              &                          \\
-                  & Exception Generation & void \_\_brk()                                                               & BRK                      \\
-                  &                      & void \_\_int\_exception(int32\_t in)                                         & INT$^d$                  \\
-                  &                      &                                                                              &                          \\
-                  & Exception Return     & void \_\_chg\_pmusr()                                                        & RTE$^e$                  \\
-                  &                      &                                                                              &                          \\
-                  & Other                & void \_\_nop()                                                               & NOP                      \\
-                  &                      & void \_\_wait()                                                              & WAIT                     \\ \hline
+Nature            & Type              & Function                                                                     & Instruction              \\ \hline
+IALU              & Arithmetic        & int32\_t \_\_max(int32\_t x, int32\_t y)                                     & MAX                      \\
+                  &                   & int32\_t \_\_min(int32\_t x, int32\_t y)                                     & MIN                      \\
+                  &                   & int64\_t \_\_emul(int32\_t x, int32\_t y)                                    & EMUL                     \\
+                  &                   & uint64\_t \_\_emulu(uint32\_t x, uint32\_t y)                                & EMULU                    \\
+                  &                   &                                                                              &                          \\
+                  & Shift             & uint32\_t \_\_rolc(uint32\_t x)                                              & ROLC                     \\
+                  &                   & uint32\_t \_\_rorc(uint32\_t x)                                              & RORC                     \\
+                  &                   & uint32\_t \_\_rotl(uint32\_t x, uint32\_t y)                                 & ROTL                     \\
+                  &                   & uint32\_t \_\_rotr(uint32\_t x, uint32\_t y)                                 & ROTR                     \\
+                  &                   & uint32\_t \_\_revl(uint32\_t x)                                              & REVL                     \\
+                  &                   & uint32\_t \_\_revw(uint32\_t x)                                              & REVW                     \\
+                  &                   &                                                                              &                          \\
+Bit               & Set/Clear/        & void \_\_bset(uint8\_t *x, uint32\_t bp3)                                    & BSET                     \\
+Manipulation      & Toggle            & void \_\_bclr(uint8\_t *x, uint32\_t bp3)                                    & BCLR                     \\
+                  &                   & void \_\_bnot(uint8\_t *x, uint32\_t bp3)                                    & BNOT                     \\
+                  &                   &                                                                              &                          \\
+Data Movement     & Exchange          & void \_\_xchg(int32\_t *x, int32\_t *y)                                      & XCHG$^a$                 \\
+                  &                   &                                                                              &                          \\
+Array             & MAC               & int64\_t \_\_rmpab(int64\_t init, uint32\_t cnt, int8\_t *x, int8\_t *y)     & RMPA.B                   \\
+                  &                   & int64\_t \_\_rmpaw(int64\_t init, uint32\_t cnt, int16\_t *x, int16\_t *y)   & RMPA.W                   \\
+                  &                   & int64\_t \_\_rmpal(int64\_t init, uint32\_t cnt, int32\_t *x, int32\_t *y)   & RMPA.L                   \\
+                  &                   &                                                                              &                          \\
+DSP               & Move Acc          & void \_\_set\_acc(int64\_t a)                                                & MVTACLO, MVTACHI         \\
+                  &                   & int64\_t \_\_get\_acc()                                                      & MVFACHI, MVFACMI         \\
+                  &                   &                                                                              &                          \\
+                  & 16-Bit Mul/       & int32\_t \_\_macl(int16\_t *x, int16\_t *y, uint32\_t cnt)                   & MVFACMI$^b$              \\
+                  & MAC               & int16\_t \_\_macw1(int16\_t *x, int16\_t *y, uint32\_t cnt)                  & RACW \#1, MVFACHI$^c$    \\
+                  &                   & int16\_t \_\_macw2(int16\_t *x, int16\_t *y, uint32\_t cnt)                  & RACW \#2, MVFACHI$^c$    \\
+                  &                   &                                                                              &                          \\
+System            & Control           & void \_\_set\_$<$xxx$>$(uint32\_t cr)                                        & MVTC                     \\
+                  & Register          & uint32\_t \_\_get\_$<$xxx$>$()                                               & MVFC                     \\
+                  &                   & void \_\_set\_$<$yyy$>$(void *cr)                                            & MVTC                     \\
+                  &                   & void * \_\_get\_$<$yyy$>$()                                                  & MVFC                     \\
+                  &                   & void \_\_set\_$<$zzz$>$(uint32\_t cr)                                        & MVTDC                    \\
+                  &                   & uint32\_t \_\_get\_$<$zzz$>$()                                               & MVFDC                    \\
+                  &                   & void * \_\_get\_depc()                                                       & MVFDC                    \\
+                  &                   & uint8\_t \_\_get\_ipl()                                                      & MVFC                     \\
+                  &                   & void \_\_set\_ipl(int32\_t ipl)                                              & MVTIPL$^d$               \\
+                  &                   &                                                                              &                          \\
+                  & Write Flag        & void \_\_setpsw\_i()                                                         & SETPSW                   \\
+                  &                   & void \_\_clrpsw\_i()                                                         & CLRPSW                   \\
+                  &                   &                                                                              &                          \\
+                  & Exception         & void \_\_brk()                                                               & BRK                      \\
+                  & Generation/       & void \_\_int\_exception(int32\_t in)                                         & INT$^d$                  \\
+                  & Return            & void \_\_chg\_pmusr()                                                        & RTE$^e$                  \\
+                  &                   &                                                                              &                          \\
+                  & Other             & void \_\_nop()                                                               & NOP                      \\
+                  &                   & void \_\_wait()                                                              & WAIT                     \\ \hline
 \multicolumn{4}{l}{a. XCHG exchanges register and memory, so the intrinsic uses load, XCHG and store.} \\
 \multicolumn{4}{l}{b. Accumulates with MULLO, MACHI and MACLO, and returns the result with MVFACMI.} \\
 \multicolumn{4}{l}{c. Accumulates with MULLO, MACHI and MACLO, rounds with RACW \#1 or \#2, and returns the result with MVFACHI.} \\
